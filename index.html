@@ -3,65 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>អាពាហ៍ពិពាហ៍ 💍</title>
-    <meta name="title" content="អាពាហ៍ពិពាហ៍ 💍">
-    <meta name="description" content="សូមគោរពអញ្ជើញលោកអ្នកចូលរួមក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️">
-    <link rel="canonical" href="https://pisethandmonypenita.netlify.app/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Open Graph / Facebook / Messenger -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pisethandmonypenita.netlify.app/">
+<title>Digital Invitation - លិខិតអញ្ជើញ</title>
+
+<!-- Facebook / Messenger / WhatsApp -->
     <meta property="og:title" content="អាពាហ៍ពិពាហ៍ 💍">
     <meta property="og:description" content="សូមគោរពអញ្ជើញលោកអ្នកចូលរួមក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️">
     <meta property="og:image" content="https://pisethandmonypenita.netlify.app/PisethandMonypenita.jpg">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="km_KH">
+    <meta property="og:url" content="https://pisethandmonypenita.netlify.app/">
+    <meta property="og:type" content="website">
 
     <!-- Twitter / Telegram -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://pisethandmonypenita.netlify.app/">
     <meta name="twitter:title" content="អាពាហ៍ពិពាហ៍ 💍">
     <meta name="twitter:description" content="សូមគោរពអញ្ជើញលោកអ្នកចូលរួមក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ ❤️">
     <meta name="twitter:image" content="https://pisethandmonypenita.netlify.app/PisethandMonypenita.jpg">
 
-    <!-- Update guest name in the browser title and social tags when ?to= is present -->
+    <!-- កូដ JavaScript សម្រាប់ទាញយកឈ្មោះភ្ញៀវមកដូរ Meta ស្វ័យប្រវត្តិ -->
     <script>
-        (function () {
-            const guestName = new URLSearchParams(window.location.search).get('to');
-            if (!guestName || !guestName.trim()) return;
-            const name = guestName.trim();
-            document.title = `អាពាហ៍ពិពាហ៍ 💍 - ${name}`;
-            const setMeta = (selector, value) => {
-                const element = document.querySelector(selector);
-                if (element) element.setAttribute('content', value);
-            };
-            setMeta('meta[property="og:title"]', `សូមគោរពអញ្ជើញ ${name}`);
-            setMeta('meta[property="og:description"]', `សូមគោរពអញ្ជើញ ${name} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
-            setMeta('meta[name="twitter:title"]', `សូមគោរពអញ្ជើញ ${name}`);
-            setMeta('meta[name="twitter:description"]', `សូមគោរពអញ្ជើញ ${name} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
-        })();
-    </script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const guestName = urlParams.get('to');
 
+        if (guestName) {
+            document.title = `អាពាហ៍ពិពាហ៍ 💍 - ${guestName}`;
+            
+            let ogTitle = document.querySelector('meta[property="og:title"]');
+            if (ogTitle) ogTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestName}`);
+
+            let ogDesc = document.querySelector('meta[property="og:description"]');
+            if (ogDesc) ogDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
+
+            let twTitle = document.querySelector('meta[name="twitter:title"]');
+            if (twTitle) twTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestName}`);
+
+            let twDesc = document.querySelector('meta[name="twitter:description"]');
+            if (twDesc) twDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
+        }
+    </script>
+    
+    <title>Digital Invitation - លិខិតអញ្ជើញ</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,300..700;1,300..700&family=Moul&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
+    
     <style>
-
         :root {
-            /* Dark red + champagne wedding palette */
-            --gold-light: #fff1d6;
-            --gold-mid: #f3d5b0;
-            --gold-main: #d6ad67;
-            --gold-deep: #8e263b;
-            --emerald-bg: #35000d;
-            --emerald-card: rgba(91, 8, 29, 0.84);
-            --text-gold: #ffe7bd;
-            --text-light: #fff3ef;
-            --border-gold: rgba(225, 185, 122, 0.56);
+            --silver-1: #ffffff;
+            --silver-2: #e9e9e9;
+            --silver-3: #c9c9c9;
+            --silver-4: #a8a8a8;
+            --silver-5: #8a8a8a;
+            --silver-6: #cfcfcf;
+            --silver-7: #666666;
+            --primary-gold: #E8E8E8;
+            --dark-gold: #8A8A8A;
+            --bg-dark: #0f172a;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --border-color: rgba(220, 220, 220, 0.42);
+            --text-light: #f8fafc;
+            --text-gold: #F1F1F1;
+            --glow-gold: rgba(220, 220, 220, 0.25);
+            --text-formal: #D0D0D0; 
         }
 
         * {
@@ -72,7 +76,7 @@
         }
 
         body {
-            background-color: var(--emerald-bg);
+            background-color: #020617;
             color: var(--text-light);
             font-family: 'Kantumruy Pro', sans-serif;
             display: flex;
@@ -80,6 +84,7 @@
             align-items: center;
             min-height: 100vh;
             overflow-x: hidden;
+            padding: 1rem;
             position: relative;
         }
 
@@ -97,21 +102,28 @@
 
         .petal {
             position: absolute;
-            background: linear-gradient(135deg, #ffe6bd, #d6ad67);
+            background: linear-gradient(135deg, #ffb7c5, #ff69b4);
             border-radius: 15px 0 15px 0;
-            opacity: 0.75;
+            opacity: 0.7;
             pointer-events: none;
             animation: fall linear infinite;
-            filter: drop-shadow(0 2px 6px rgba(214, 173, 103, 0.28));
         }
 
         @keyframes fall {
-            0% { transform: translateY(-10vh) rotate(0deg) scale(0.8); opacity: 0; }
-            10% { opacity: 0.9; }
-            100% { transform: translateY(105vh) rotate(360deg) scale(1.2); opacity: 0; }
+            0% {
+                transform: translateY(-10vh) rotate(0deg) scale(0.8);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(105vh) rotate(360deg) scale(1.2);
+                opacity: 0;
+            }
         }
 
-        /* Background Media */
+        /* Background Video / Image Styling */
         .bg-media {
             position: fixed;
             top: 0;
@@ -120,9 +132,9 @@
             height: 100vh;
             object-fit: cover;
             z-index: -2;
-            filter: brightness(0.34) contrast(1.12) saturate(0.82);
         }
 
+        /* Dark Overlay & Blur */
         body::before {
             content: '';
             position: fixed;
@@ -130,624 +142,2042 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(109, 10, 34, 0.72) 0%, rgba(28, 0, 8, 0.96) 100%);
-            backdrop-filter: blur(4px);
+            background: #0d1702a6;
+            backdrop-filter: blur(2px);
             z-index: -1;
         }
 
-        /* Main Invitation Card Container */
+        /* Main Responsive Container Frame */
         .invitation-card {
             width: 100%;
-            max-width: 480px;
-            min-height: 100vh;
-            background: rgba(72, 4, 22, 0.93);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border-left: 1px solid var(--border-gold);
-            border-right: 1px solid var(--border-gold);
-            padding: 2.5rem 1.2rem;
+            max-width: 430px;
+            height: 92vh;
+            max-height: 860px;
+            background: linear-gradient(#AC080E, rgba(172, 8, 14, 0.72)), url('backgrund/IMG_1005.jpg');
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 2rem 1.2rem;
             text-align: center;
             position: relative;
-            box-shadow: 0 12px 38px rgba(0, 0, 0, 0.42);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px var(--glow-gold);
             display: flex;
             flex-direction: column;
+            overflow: hidden;
             z-index: 2;
+            transition: all 0.4s ease;
         }
 
-        /* Fixed Top Controls */
+        @media screen and (min-width: 900px) {
+            .invitation-card {
+                max-width: 850px;
+                padding: 2.5rem 2rem;
+            }
+            .page.active {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                align-items: center;
+            }
+            .btn-group {
+                grid-column: span 2;
+            }
+        }
+
+        /* Decorative Corners */
+        .invitation-card::before, .invitation-card::after {
+            content: ''; 
+            position: absolute; 
+            width: 40px; 
+            height: 40px; 
+            border: 1px solid var(--primary-gold); 
+            pointer-events: none; 
+            opacity: 0.5; 
+            z-index: 5;
+        }
+        .invitation-card::before { top: 12px; left: 12px; border-right: none; border-bottom: none; }
+        .invitation-card::after { bottom: 12px; right: 12px; border-left: none; border-top: none; }
+
+        /* =========================================================
+           7-TONE SILVER FRAME AROUND THE WHOLE INVITATION CARD
+           The frame image remains replaceable at assets/card-frame.png
+           ========================================================= */
+        .invitation-card {
+            border: 3px solid transparent !important;
+            background:
+                linear-gradient(#AC080E, rgba(172, 8, 14, 0.72)) padding-box,
+                linear-gradient(135deg,
+                    var(--silver-1) 0%,
+                    var(--silver-3) 14%,
+                    var(--silver-7) 28%,
+                    var(--silver-6) 40%,
+                    var(--silver-1) 52%,
+                    var(--silver-4) 66%,
+                    var(--silver-2) 82%,
+                    var(--silver-1) 100%) border-box,
+                url('backgrund/IMG_1005.jpg') center/cover border-box;
+            box-shadow:
+                0 25px 50px -12px rgba(0,0,0,.8),
+                0 0 0 1px rgba(255,255,255,.18),
+                0 0 24px rgba(220,220,220,.20),
+                inset 0 0 18px rgba(255,255,255,.07);
+        }
+
+        /* Metallic silver highlight around the replaceable frame image */
+        .invitation-card::before {
+            border-color: var(--silver-2) !important;
+            box-shadow: 0 0 8px rgba(255,255,255,.22);
+        }
+
+        /* =========================================================
+           REPLACEABLE FRAME AROUND THE WHOLE INVITATION CARD
+           Put your transparent PNG frame at: assets/card-frame.png
+           This frame surrounds every page, NOT the gallery photos.
+           ========================================================= */
+        .invitation-card {
+            isolation: isolate;
+        }
+
+        .invitation-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0 !important;
+            background: url("/backgrund/frame.png") center center / 100% 100% no-repeat;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 1;
+        }
+
+
+        /* Top Controls */
         .top-controls {
-            position: fixed;
-            top: 15px;
-            right: 15px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
             display: flex;
             gap: 8px;
-            z-index: 100;
+            z-index: 30;
         }
 
         .icon-btn {
-            background: rgba(74, 5, 23, 0.96) !important; 
-            border: 1px solid var(--gold-main) !important; 
-            color: var(--gold-mid) !important; 
-            border-radius: 50%;
-            width: 42px;
-            height: 42px;
+            background: rgba(212, 175, 55, 0.2); 
+            border: 1px solid var(--primary-gold); 
+            color: var(--primary-gold); 
+            border-radius: 20px;
+            padding: 0 10px;
+            height: 38px;
             display: flex; 
             align-items: center; 
             justify-content: center; 
             cursor: pointer; 
-            font-size: 1.1rem;
+            font-size: 0.8rem;
+            font-weight: bold;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.38);
         }
 
-        .icon-btn:hover {
-            transform: scale(1.08);
-            background: var(--gold-main) !important;
-            color: #3a0010 !important;
+        .music-btn {
+            border-radius: 50%;
+            width: 38px;
+            padding: 0;
         }
-
         .music-btn.playing { animation: pulse-glow 2s infinite; }
-        @keyframes pulse-glow { 0% { box-shadow: 0 0 0 0 rgba(245, 215, 127, 0.6); } 70% { box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
+        @keyframes pulse-glow { 0% { box-shadow: 0 0 0 0 rgba(220, 220, 220, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
 
-        /* Scroll Sections Styling */
-        .scroll-section {
-            width: 100%;
-            padding: 2.5rem 0.5rem;
+        /* Pages Management */
+        .page {
+            display: none; 
+            flex-direction: column; 
+            width: 100%; 
+            height: 100%; 
+            animation: fadeIn 0.4s ease-in-out; 
+            overflow-y: auto; 
+            padding: 0.5rem;
+            scroll-behavior: smooth;
+            z-index: 10;
+            background: #;
+            border-radius: 16px;
+            position: relative;
+        }
+        
+        #page1 {
+            background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.65)), url('backgrund/IMG_0987.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 16px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .page.active { display: flex; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+        .page::-webkit-scrollbar { width: 4px; }
+        .page::-webkit-scrollbar-thumb { background: var(--primary-gold); border-radius: 4px; }
+
+        /* Typography */
+        .header-title { font-family: 'Moul', cursive; color: var(--primary-gold); font-size: 1.3rem; margin-bottom: 0.3rem; line-height: 1.8; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .sub-title { font-family: 'Playfair Display', serif; letter-spacing: 3px; font-size: 0.85rem; color: var(--text-gold); text-transform: uppercase; margin-bottom: 1rem; }
+        
+        /* Interactive Wax Seal Cover Styles */
+        .envelope-cover {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            position: relative;
-            border-bottom: 1px solid rgba(225, 185, 122, 0.24);
-        }
-
-        .scroll-section:last-child {
-            border-bottom: none;
-        }
-
-        /* Typography & Gold Styling */
-        .header-title, .formal-title, .guest-label, .main-couple-name-formal, .agenda-divider, .program-day-title, .time-badge, .section-title, .highlight-date-formal, .sub-title, .wedding-date-front {
-            background: linear-gradient(180deg, #fff8e7 0%, #f5dca8 38%, #d6ad67 72%, #fff0c9 100%) !important;
-            -webkit-background-clip: text !important;
-            background-clip: text !important;
-            -webkit-text-fill-color: transparent !important;
-            color: transparent !important;
-        }
-
-        .header-title { font-family: 'Moul', cursive; font-size: 1.3rem; margin-bottom: 0.3rem; line-height: 1.8; }
-        .sub-title { font-family: 'Playfair Display', serif; letter-spacing: 3px; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 1.5rem; }
-
-        /* Section 1 - Cover */
-        .page1-logo {
-            width: 180px;
-            height: 120px;
-            margin: 1rem auto;
-            background: linear-gradient(180deg, #fff4d7 0%, #edcf93 35%, #d6ad67 72%, #fff4d7 100%);
-            -webkit-mask: url('backgrund/logo.png') no-repeat center / contain;
-            mask: url('backgrund/logo.png') no-repeat center / contain;
-            filter: drop-shadow(0 0 8px rgba(190,76,98,0.28));
-        }
-
-        .guest-invitation-container { margin: 1.5rem 0; width: 100%; }
-        .guest-label { font-family: 'Moul', cursive; font-size: 1rem; margin-bottom: 0.6rem; }
-        .guest-name-box {
-            background: linear-gradient(135deg, #fff0cf, #d6ad67, #8e263b);
-            border-radius: 50px;
-            padding: 2px;
+            height: 100%;
             width: 100%;
-            max-width: 320px;
-            margin: 0 auto;
+            padding: 1rem;
+            animation: scaleUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        @keyframes scaleUp { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+        .wax-seal-btn {
+            width: 90px;
+            height: 90px;
+            background: radial-gradient(circle, #ffffff 0%, #d6d6d6 28%, #9d9d9d 55%, #6f6f6f 78%, #f5f5f5 100%);
+            border-radius: 50%;
+            border: 3px dashed #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 0 25px rgba(220, 220, 220, 0.6), inset 0 2px 5px rgba(255,255,255,0.4);
+            margin: 1.5rem 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .wax-seal-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 35px rgba(235, 235, 235, 0.9);
+        }
+        .wax-seal-btn span {
+            font-family: 'Moul', cursive;
+            font-size: 1.8rem;
+            color: #202020;
+            text-shadow: 0 1px 1px rgba(255,255,255,0.4);
+        }
+
+        .envelope-instruction {
+            font-size: 0.85rem;
+            color: var(--text-gold);
+            margin-top: 0.5rem;
+            letter-spacing: 0.5px;
+            animation: pulse-text 1.5s infinite;
+        }
+        @keyframes pulse-text { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
+
+        .couple-names-front { font-family: 'Moul', cursive; font-size: 1.2rem; color: #ffffff; margin: 0.8rem 0; line-height: 1.8; text-shadow: 0 0 15px rgba(220, 220, 220, 0.4); }
+        .couple-names-front span { display: block; font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--primary-gold); font-style: italic; margin-top: 0.2rem; }
+
+        .guest-invitation-container {
+            margin: 0.8rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .guest-label {
+            font-family: 'Moul', cursive;
+            color: var(--primary-gold);
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+        }
+        .guest-name-box {
+            background: linear-gradient(135deg, #e6c875, #b8860b, #e6c875);
+            border-radius: 50px;
+            padding: 3px;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 0 15px rgba(220, 220, 220, 0.4);
         }
         .guest-name-inner {
-            background: rgba(57, 2, 17, 0.98);
+            background: rgba(255, 255, 255, 0.92);
             border-radius: 50px;
-            padding: 0.6rem 1rem;
-            color: var(--text-gold);
-            font-size: 0.95rem;
+            padding: 0.5rem 1rem;
+            color: #1e293b;
+            font-size: 0.9rem;
             font-weight: 700;
+            text-align: center;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
-        .wedding-date-front { font-size: 0.88rem; line-height: 1.7; margin-top: 1.2rem; }
-
-        .scroll-down-hint {
-            font-size: 0.8rem;
-            color: var(--gold-mid);
-            margin-top: 2rem;
-            animation: bounce 1.8s infinite;
+        .wedding-date-front {
+            font-size: 0.78rem;
+            color: var(--text-gold);
+            margin-top: 0.6rem;
+            font-weight: 500;
         }
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
 
-        /* Section 2 - Formal & Agenda */
-        .content-container-formal { font-size: 0.85rem; line-height: 1.8; text-align: center; width: 100%; }
-        .formal-title { font-family: 'Moul', cursive; font-size: 1.1rem; margin-bottom: 1.2rem; }
-        .parents-block, .couple-names-block-formal { display: flex; justify-content: space-between; margin-bottom: 1.2rem; width: 100%; gap: 10px; }
+        /* Buttons */
+        .btn-group { display: flex; gap: 10px; margin-top: auto; padding-top: 1rem; flex-shrink: 0; width: 100%; position: relative; z-index: 25; }
+        .btn {
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold)); 
+            color: #202020; 
+            font-weight: 600; 
+            padding: 0.75rem 1rem; 
+            border: none; 
+            border-radius: 12px; 
+            font-size: 0.85rem; 
+            cursor: pointer; 
+            text-decoration: none; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 0.5rem; 
+            transition: all 0.3s ease; 
+            width: 100%;
+        }
+        .btn-secondary { background: rgba(255, 255, 255, 0.08); border: 1px solid var(--primary-gold); color: var(--text-gold); }
+        .btn:hover { transform: translateY(-2px); }
+
+        /* ================================
+           NATURAL / SMOOTH FLYING BUTTERFLIES - PAGE 2
+        ================================= */
+
+        #butterfly-container {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+            border-radius: 0;
+            display: none;
+        }
+
+        .flying-butterfly {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: var(--size);
+            height: var(--size);
+            pointer-events: none;
+            will-change: transform, opacity;
+            animation: naturalButterflyFlight var(--duration) cubic-bezier(.42,0,.58,1) var(--delay) infinite;
+        }
+
+        .butterfly-inner {
+            width: 100%;
+            height: 100%;
+            background-image: url('backgrund/butterfly.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: var(--opacity);
+            filter: drop-shadow(0 2px 3px rgba(0,0,0,.12));
+            will-change: transform;
+            animation:
+                butterflyWings var(--wing-speed) ease-in-out infinite,
+                butterflyFloat var(--float-speed) ease-in-out infinite;
+        }
+
+        /* Long, gentle curved flight.
+           The extra points make the path feel less mechanical. */
+        @keyframes naturalButterflyFlight {
+            0% {
+                transform: translate3d(var(--x0), var(--y0), 0)
+                           rotate(var(--r0)) scale(var(--scale));
+                opacity: 0;
+            }
+            7% { opacity: var(--opacity); }
+            18% {
+                transform: translate3d(var(--x1), var(--y1), 0)
+                           rotate(var(--r1)) scale(calc(var(--scale) * .96));
+            }
+            35% {
+                transform: translate3d(var(--x2), var(--y2), 0)
+                           rotate(var(--r2)) scale(calc(var(--scale) * 1.04));
+            }
+            52% {
+                transform: translate3d(var(--x3), var(--y3), 0)
+                           rotate(var(--r3)) scale(calc(var(--scale) * .98));
+            }
+            69% {
+                transform: translate3d(var(--x4), var(--y4), 0)
+                           rotate(var(--r4)) scale(calc(var(--scale) * 1.06));
+            }
+            84% {
+                transform: translate3d(var(--x5), var(--y5), 0)
+                           rotate(var(--r5)) scale(calc(var(--scale) * .97));
+            }
+            94% { opacity: var(--opacity); }
+            100% {
+                transform: translate3d(var(--x6), var(--y6), 0)
+                           rotate(var(--r6)) scale(var(--scale));
+                opacity: 0;
+            }
+        }
+
+        /* Gentle wing movement */
+        @keyframes butterflyWings {
+            0% { transform: scaleX(1) rotate(-1deg); }
+            18% { transform: scaleX(.72) rotate(1deg); }
+            38% { transform: scaleX(.38) rotate(-1deg); }
+            52% { transform: scaleX(.78) rotate(1.5deg); }
+            72% { transform: scaleX(.46) rotate(-1deg); }
+            100% { transform: scaleX(1) rotate(1deg); }
+        }
+
+        /* Small floating/bobbing motion */
+        @keyframes butterflyFloat {
+            0% { margin-top: -3px; }
+            25% { margin-top: 1px; }
+            50% { margin-top: 5px; }
+            75% { margin-top: 0px; }
+            100% { margin-top: -4px; }
+        }
+
+        /* Page 2 Details */
+        .content-container-formal { font-size: 0.82rem; color: var(--text-light); line-height: 1.8; text-align: center; width: 100%; position: relative; z-index: 10; }
+        .formal-title { font-family: 'Moul', cursive; color: var(--primary-gold); font-size: 1.05rem; margin-bottom: 0.8rem; }
+        .parents-block, .couple-names-block-formal { display: flex; justify-content: space-between; margin-bottom: 1rem; }
         .parents-side, .couple-side-formal { width: 48%; }
-        .parent-name { color: var(--gold-mid); font-weight: 700; font-size: 0.82rem; }
-        .invitation-intro { text-decoration: underline; text-underline-offset: 4px; color: var(--gold-mid); margin: 1rem 0 0.5rem; font-weight: 600; }
-        .invitation-text { margin-bottom: 1.2rem; text-align: center; font-size: 0.82rem; opacity: 0.95; }
-        
+        .parent-name { color: #bfa071; font-weight: bold; }
+        .invitation-intro { text-decoration: underline; color: var(--text-gold); margin-bottom: 0.5rem; }
+        .invitation-text { color: #cbd5e1; margin-bottom: 1rem; text-align: center; font-size: 0.8rem; }
+        .date-location-block-formal { text-align: center; color: var(--text-light); margin-bottom: 1.2rem; }
+        .main-couple-name-formal { color: var(--primary-gold); font-family: 'Moul', cursive; font-size: 0.9rem; }
+        /* Couple name labels — clearly identify groom/bride as in the reference */
         .couple-name-label {
             display: block;
+            margin-bottom: 0.18rem;
             font-family: 'Moul', cursive;
-            font-size: 0.75rem;
-            color: var(--gold-mid);
-            margin-bottom: 0.2rem;
+            font-size: 0.72rem;
+            line-height: 1.5;
+            background: linear-gradient(180deg, #fff7c9 0%, #f5d96f 25%, #b8860b 48%, #ffeaa1 65%, #8a6508 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            text-shadow: 0 0 6px rgba(212,175,55,.18);
         }
-        .main-couple-name-formal { font-family: 'Moul', cursive; font-size: 0.95rem; }
+
+        .couple-side-formal {
+            text-align: center;
+        }
+
+        .couple-side-formal .main-couple-name-formal {
+            margin: 0;
+        }
+
+        .highlight-date-formal { color: var(--primary-gold); font-weight: bold; }
 
         .agenda-divider {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            margin: 2rem 0 1.2rem;
+            margin: 1.5rem 0 1rem;
+            color: var(--primary-gold);
             font-family: 'Moul', cursive;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
         .agenda-divider::before, .agenda-divider::after {
-            content: ''; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, #d6ad67, transparent);
+            content: ''; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
         }
 
         .program-day-title {
             font-family: 'Kantumruy Pro', sans-serif;
             font-weight: 700;
-            background: rgba(214, 173, 103, 0.13);
-            border-left: 3px solid var(--gold-main) !important;
-            padding: 0.5rem 0.8rem;
+            color: var(--primary-gold);
+            background: rgba(220, 220, 220, 0.15);
+            border-left: 3px solid var(--primary-gold);
+            padding: 0.4rem 0.8rem;
             text-align: left;
-            margin: 1.5rem 0 1rem;
+            margin: 1rem 0 0.8rem;
             border-radius: 0 8px 8px 0;
-            font-size: 0.85rem;
-            width: 100%;
+            font-size: 0.82rem;
         }
 
         .timeline {
             position: relative;
-            padding-left: 1.2rem;
+            padding-left: 1rem;
             text-align: left;
-            border-left: 2px dashed rgba(225, 185, 122, 0.34);
-            margin-left: 0.4rem;
-            width: 100%;
+            border-left: 2px dashed rgba(220, 220, 220, 0.3);
+            margin-left: 0.5rem;
         }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 1rem;
-            padding-left: 0.5rem;
+            margin-bottom: 0.8rem;
+            padding-left: 0.8rem;
+            opacity: 0.4;
+            transform: translateY(10px);
+            transition: all 0.4s ease-out;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -1.55rem;
-            top: 0.35rem;
+            left: -1.35rem;
+            top: 0.3rem;
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: var(--gold-main);
-            box-shadow: 0 0 8px var(--gold-mid);
+            background: var(--primary-gold);
+            box-shadow: 0 0 8px var(--primary-gold);
         }
 
-        .time-badge { font-weight: 700; font-size: 0.8rem; display: block; margin-bottom: 0.1rem; }
-        .event-name { font-size: 0.82rem; opacity: 0.9; line-height: 1.6; }
-
-        /* Section 3 - Couple Bio (រៀបចំ Frame រូបភាពឲ្យស្អាត) */
-        .photo-frame { 
-            width: 100%; 
-            height: 280px; 
-            border: 2px solid var(--gold-main); 
-            border-radius: 16px; 
-            overflow: hidden; 
-            margin-bottom: 1.2rem;
-            box-shadow: 0 0 15px rgba(225, 185, 122, 0.22), inset 0 0 10px rgba(0, 0, 0, 0.22);
-            padding: 4px;
-            background: linear-gradient(135deg, #fff1d6, var(--gold-deep));
-        }
-        .photo-frame img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            border-radius: 12px;
+        .time-badge {
+            font-weight: bold;
+            color: var(--text-gold);
+            font-size: 0.78rem;
+            display: inline-block;
+            margin-bottom: 0.1rem;
         }
 
-        .couple-bio-block { display: flex; justify-content: space-between; gap: 10px; width: 100%; }
-        .bio-side { width: 48%; background: var(--emerald-card); border: 1px solid var(--border-gold); border-radius: 14px; padding: 0.8rem 0.5rem; text-align: center; }
-        
-        /* Frame រូបរង្វង់របស់កូនកំលោះ-កូនក្រមុំ */
-        .bio-side .avatar-frame {
-            width: 72px;
-            height: 72px;
-            margin: 0 auto 0.5rem;
+        .event-name {
+            color: #e2e8f0;
+            font-size: 0.8rem;
+        }
+
+        .scroll-hint {
+            color: var(--primary-gold);
+            font-size: 0.75rem;
+            margin-top: 0.5rem;
+            animation: bounce 1.5s infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+
+        /* Page 3 */
+        .photo-frame { width: 100%; height: 260px; border: 2px solid var(--primary-gold); border-radius: 16px; overflow: hidden; margin-bottom: 1rem; box-shadow: 0 0 15px var(--glow-gold); }
+        .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+        .couple-bio-block { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 1rem; }
+        .bio-side { width: 48%; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 0.8rem; text-align: center; }
+        .bio-side img { width: 65px; height: 65px; border-radius: 50%; border: 2px solid var(--primary-gold); object-fit: cover; margin-bottom: 0.5rem; }
+        .bio-side h3 { font-family: 'Moul', cursive; font-size: 0.8rem; color: var(--primary-gold); font-weight: normal; margin-bottom: 0.3rem; }
+        .bio-side p { font-size: 0.75rem; color: #cbd5e1; }
+
+        /* Page 5 */
+        .section-box { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.8rem; margin-bottom: 0.8rem; text-align: center; }
+        .section-title { color: var(--primary-gold); font-family: 'Moul', cursive; font-size: 0.82rem; margin-bottom: 0.5rem; font-weight: normal; }
+
+        /* 7-tone silver / chrome typography */
+        .header-title,
+        .formal-title,
+        .guest-label,
+        .couple-names-front span,
+        .main-couple-name-formal,
+        .agenda-divider,
+        .program-day-title,
+        .time-badge,
+        .section-title,
+        .highlight-date-formal,
+        .sub-title,
+        .wedding-date-front {
+            background: linear-gradient(
+                180deg,
+                var(--silver-1) 0%,
+                var(--silver-2) 16%,
+                var(--silver-4) 34%,
+                var(--silver-1) 50%,
+                var(--silver-5) 68%,
+                var(--silver-2) 84%,
+                var(--silver-7) 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 1px 8px rgba(255,255,255,0.12);
+        }
+
+        /* 7-tone silver border/line treatment */
+        .invitation-card::before,
+        .invitation-card::after,
+        .photo-frame {
+            border-color: var(--silver-3);
+        }
+
+        .agenda-divider::before,
+        .agenda-divider::after {
+            background: linear-gradient(
+                90deg,
+                transparent,
+                var(--silver-6),
+                var(--silver-1),
+                var(--silver-4),
+                var(--silver-1),
+                var(--silver-6),
+                transparent
+            );
+        }
+    
+/* Silver 7-tone treatment: Guest frame + parents' names */
+.guest-box,
+.guest-box::before,
+.guest-box::after {
+  border-color: transparent !important;
+}
+
+.guest-box {
+  background:
+    linear-gradient(#111, #111) padding-box,
+    linear-gradient(135deg,
+      var(--silver-1) 0%,
+      var(--silver-3) 14%,
+      var(--silver-5) 28%,
+      var(--silver-2) 42%,
+      var(--silver-7) 58%,
+      var(--silver-4) 76%,
+      var(--silver-1) 100%) border-box !important;
+  border: 2px solid transparent !important;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.12),
+    0 0 18px rgba(220,220,220,.16),
+    inset 0 0 14px rgba(255,255,255,.05) !important;
+}
+
+.guest-label,
+.guest-name {
+  background: linear-gradient(90deg,
+    var(--silver-7) 0%,
+    var(--silver-5) 12%,
+    var(--silver-2) 28%,
+    var(--silver-1) 45%,
+    var(--silver-3) 62%,
+    var(--silver-5) 78%,
+    var(--silver-1) 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  text-shadow: 0 0 8px rgba(235,235,235,.16) !important;
+}
+
+/* Parent names / family-name fields */
+.parent-name,
+.parents-name,
+.father-name,
+.mother-name,
+.parent-info,
+.parents-info,
+.family-name {
+  background: linear-gradient(90deg,
+    var(--silver-7) 0%,
+    var(--silver-4) 18%,
+    var(--silver-1) 38%,
+    var(--silver-2) 52%,
+    var(--silver-5) 70%,
+    var(--silver-1) 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  text-shadow: 0 0 7px rgba(235,235,235,.14) !important;
+}
+
+/* Any parent-name box/frame */
+.parents-box,
+.parent-box,
+.parents-card,
+.parent-card {
+  border: 1.5px solid transparent !important;
+  border-image: linear-gradient(135deg,
+    var(--silver-1),
+    var(--silver-4),
+    var(--silver-7),
+    var(--silver-2),
+    var(--silver-1)) 1 !important;
+}
+
+
+        /* ================================
+           PAGE 1 - SILVER LOGO COVER
+        ================================= */
+        /* PAGE 1 LOGO — true 7-tone silver / chrome recolor */
+        .page1-logo {
+            position: relative;
+            width: min(230px, 62vw);
+            height: min(150px, 30vw);
+            min-height: 82px;
+            display: block;
+            margin: 0 auto 1rem;
+            background: linear-gradient(
+                180deg,
+                #ffffff 0%,
+                #d9d9d9 12%,
+                #8f8f8f 27%,
+                #f7f7f7 42%,
+                #b8b8b8 57%,
+                #666666 73%,
+                #f2f2f2 88%,
+                #ffffff 100%
+            );
+            -webkit-mask-image: url('backgrund/logo.png');
+            mask-image: url('backgrund/logo.png');
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            filter:
+                drop-shadow(0 0 3px rgba(255,255,255,.95))
+                drop-shadow(0 0 9px rgba(220,220,220,.55))
+                drop-shadow(0 0 18px rgba(255,255,255,.22));
+            animation: logoFloat 4s ease-in-out infinite;
+        }
+
+        /* Extra metallic highlight that travels across the silver logo */
+        .page1-logo::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                115deg,
+                transparent 20%,
+                rgba(255,255,255,0) 34%,
+                rgba(255,255,255,.95) 45%,
+                rgba(255,255,255,0) 56%,
+                transparent 76%
+            );
+            -webkit-mask-image: url('backgrund/logo.png');
+            mask-image: url('backgrund/logo.png');
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            animation: silverShine 3.8s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes silverShine {
+            0%, 45% { opacity: 0; transform: translateX(-10%); }
+            55% { opacity: .9; }
+            72%, 100% { opacity: 0; transform: translateX(10%); }
+        }
+
+        @keyframes logoFloat {
+            0%,100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-4px) scale(1.015); }
+        }
+
+        .page1-logo-frame {
+            position: relative;
+            padding: 12px 22px;
+            margin-bottom: .7rem;
+        }
+
+        .page1-logo-frame::before,
+        .page1-logo-frame::after {
+            content: "";
+            position: absolute;
+            left: 8%;
+            right: 8%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #fff, #aaa, #fff, transparent);
+            opacity: .8;
+        }
+        .page1-logo-frame::before { top: 0; }
+        .page1-logo-frame::after { bottom: 0; }
+
+        .page1-logo-frame .corner {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-color: #eee;
+            border-style: solid;
+            opacity: .75;
+        }
+        .page1-logo-frame .c1 { top: 0; left: 0; border-width: 1px 0 0 1px; }
+        .page1-logo-frame .c2 { top: 0; right: 0; border-width: 1px 1px 0 0; }
+        .page1-logo-frame .c3 { bottom: 0; left: 0; border-width: 0 0 1px 1px; }
+        .page1-logo-frame .c4 { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
+
+        /* ================================
+           PAGE 4 - ELEGANT MEMORY GALLERY
+        ================================= */
+        #page4 {
+            padding: .7rem .55rem 1rem;
+        }
+
+        .gallery-heading {
+            margin: 0 0 12px;
+            padding: 10px 8px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.025));
+            border: 1px solid rgba(255,255,255,.18);
+            box-shadow: inset 0 1px rgba(255,255,255,.12), 0 8px 22px rgba(0,0,0,.25);
+        }
+        .gallery-heading h3 {
+            margin: 0;
+            font-family: 'Moul', cursive;
+            font-size: 1rem;
+            background: linear-gradient(180deg,#fff 0%,#ddd 24%,#999 45%,#fff 57%,#777 78%,#eee 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gallery-heading p {
+            margin: 5px 0 0;
+            font-size: .72rem;
+            color: #e7e7e7;
+            opacity: .82;
+        }
+
+        .memory-hero {
+            position: relative;
+            width: 100%;
+            height: clamp(220px, 47vh, 330px);
+            border-radius: 18px;
+            overflow: hidden;
+            background: #080b14;
+            border: 2px solid transparent;
+            background-image:
+                linear-gradient(#080b14,#080b14),
+                linear-gradient(135deg,#fff,#aaa,#555,#eee,#888,#fff);
+            background-origin: border-box;
+            background-clip: padding-box,border-box;
+            box-shadow: 0 12px 28px rgba(0,0,0,.45), 0 0 22px rgba(220,220,220,.14);
+            margin-bottom: 10px;
+        }
+        .memory-hero .slider-wrapper,
+        .memory-hero .slide { height: 100%; }
+        .memory-hero .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #05070d;
+        }
+        .memory-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(180deg,rgba(0,0,0,.02),transparent 60%,rgba(0,0,0,.3));
+        }
+
+        .gallery-counter {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 3;
+            padding: 4px 9px;
+            border-radius: 20px;
+            background: rgba(0,0,0,.48);
+            border: 1px solid rgba(255,255,255,.3);
+            color: #fff;
+            font-size: .68rem;
+            backdrop-filter: blur(6px);
+        }
+
+        .gallery-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
-            padding: 2px;
-            background: linear-gradient(135deg, #fff1d6, #d6ad67, #8e263b);
-            box-shadow: 0 0 10px rgba(225, 185, 122, 0.25);
+            border: 1px solid rgba(255,255,255,.55);
+            background: rgba(10,12,20,.45);
+            color: #fff;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            backdrop-filter: blur(6px);
+            transition: .25s ease;
         }
-        .bio-side img { 
-            width: 100%; 
-            height: 100%; 
-            border-radius: 50%; 
-            object-fit: cover; 
+        .gallery-arrow:hover { transform: translateY(-50%) scale(1.08); background: rgba(255,255,255,.16); }
+
+        .memory-thumbs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 7px;
+            margin: 10px 0 12px;
+        }
+        .memory-thumb {
+            height: 72px;
+            padding: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,.18);
+            background: #080b14;
+            cursor: pointer;
+            opacity: .72;
+            transition: .25s ease;
+            box-shadow: 0 3px 9px rgba(0,0,0,.28);
+        }
+        .memory-thumb.active {
+            opacity: 1;
+            border-color: #eee;
+            box-shadow: 0 0 0 1px #777, 0 0 14px rgba(255,255,255,.2);
+            transform: translateY(-2px);
+        }
+        .memory-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
         }
-        .bio-side h3 { font-family: 'Moul', cursive; font-size: 0.82rem; margin-bottom: 0.2rem; color: var(--gold-mid); }
-        .bio-side p { font-size: 0.78rem; opacity: 0.85; }
 
-        /* Section 4 - Gallery (បន្ថែម Frame លើរូបភាព Gallery) */
-        .gallery-heading h3 { font-family: 'Moul', cursive; font-size: 1.05rem; margin-bottom: 1rem; }
-        .gallery-list { display: flex; flex-direction: column; gap: 16px; width: 100%; }
-        
-        .gallery-item {
+        .gallery-tip {
+            text-align: center;
+            color: #ddd;
+            font-size: .68rem;
+            opacity: .72;
+            margin: 2px 0 10px;
+        }
+
+        @media (max-width: 380px) {
+            .memory-hero { height: 245px; }
+            .memory-thumbs { grid-template-columns: repeat(4, 1fr); gap: 5px; }
+            .memory-thumb { height: 58px; }
+        }
+
+
+        /* ================================
+           PAGE 1 — CLEAN LOGO COVER
+           Remove the frame/lines around the logo
+        ================================= */
+        .page1-logo-frame {
+            padding: 0;
+            margin: .2rem auto .8rem;
+        }
+        .page1-logo-frame::before,
+        .page1-logo-frame::after,
+        .page1-logo-frame .corner {
+            display: none !important;
+        }
+
+        /* ================================
+           PAGE 4 — VERTICAL MEMORY STORY
+           Elegant scroll-down photo album
+        ================================= */
+        #page4 {
+            padding: .75rem .6rem 1rem;
+            overflow-y: auto;
+            scroll-snap-type: y proximity;
+        }
+
+        #page4 .gallery-heading {
+            position: sticky;
+            top: 0;
+            z-index: 8;
+            margin-bottom: 14px;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        #page4 .memory-hero {
+            height: auto;
+            overflow: visible;
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+            margin: 0;
+        }
+
+        #page4 .memory-hero::after,
+        #page4 .gallery-counter,
+        #page4 .gallery-arrow,
+        #page4 .slider-dots,
+        #page4 .memory-thumbs {
+            display: none !important;
+        }
+
+        #page4 .memory-hero .slider-wrapper {
+            display: block !important;
             width: 100%;
-            height: 250px;
-            border-radius: 16px;
+            transform: none !important;
+        }
+
+        #page4 .memory-hero .slide {
+            width: 100%;
+            height: clamp(260px, 48vh, 430px);
+            margin: 0 0 18px;
+            padding: 0;
+            border-radius: 18px;
             overflow: hidden;
-            padding: 3px;
-            background: linear-gradient(135deg, #fff1d6, var(--gold-main), var(--gold-deep));
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.30), 0 0 10px rgba(225, 185, 122, 0.20);
-            transition: transform 0.3s ease;
-        }
-        .gallery-item:hover {
-            transform: scale(1.02);
-        }
-        .gallery-item img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            display: block; 
-            border-radius: 13px;
+            background: #05070d;
+            border: 1px solid rgba(255,255,255,.22);
+            box-shadow: 0 14px 30px rgba(0,0,0,.42), 0 0 20px rgba(255,255,255,.08);
+            scroll-snap-align: start;
+            opacity: 0;
+            transform: translateY(28px) scale(.985);
+            transition: opacity .7s ease, transform .7s ease;
         }
 
-        /* Section 5 - Map Location & Footer */
-        .location-card-final {
+        #page4 .memory-hero .slide.show-memory {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        #page4 .memory-hero .slide img {
             width: 100%;
-            background: var(--emerald-card);
-            border: 1px solid var(--border-gold);
-            border-radius: 16px;
-            padding: 10px;
-            margin-bottom: 1rem;
-        }
-        .location-map-wrap { 
-            height: 180px; 
-            border-radius: 12px; 
-            overflow: hidden; 
-            margin-bottom: 10px;
-            border: 1px solid var(--gold-main);
-        }
-        .location-map-iframe { width: 100%; height: 100%; border: 0; }
-        .location-details-final { display: flex; align-items: center; gap: 10px; padding: 6px; margin-bottom: 10px; }
-        .location-pin-final { font-size: 1.2rem; }
-        .location-text-final { text-align: left; }
-        .location-name-final { font-family: 'Moul', cursive; font-size: 0.8rem; color: var(--gold-mid); }
-        .location-address-final { font-size: 0.78rem; opacity: 0.9; }
-        
-        .location-map-btn-final {
-            display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 10px; border-radius: 10px; text-decoration: none;
-            color: #35000d !important; background: linear-gradient(135deg, var(--gold-mid), var(--gold-main)) !important; font-weight: bold; font-size: 0.8rem;
-            box-shadow: 0 2px 8px rgba(225, 185, 122, 0.22);
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 1.2s ease;
         }
 
-        .section-box { background: var(--emerald-card); border: 1px solid var(--border-gold); border-radius: 14px; padding: 1rem; width: 100%; text-align: left; }
-        .section-title { font-family: 'Moul', cursive; font-size: 0.85rem; margin-bottom: 0.6rem; text-align: center; }
-
-
-        /* ABA Bank digital wedding gift card */
-        .aba-gift-card {
-            width: 100%;
-            margin-top: 1rem;
-            padding: 14px;
-            border: 1px solid rgba(225, 185, 122, 0.72);
-            border-radius: 20px;
-            background: linear-gradient(145deg, rgba(22, 18, 18, 0.98), rgba(50, 5, 18, 0.98));
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(255,255,255,0.025);
-            overflow: hidden;
-        }
-        .aba-gift-heading { text-align: center; margin-bottom: 12px; }
-        .aba-gift-icon {
-            width: 38px; height: 38px; margin: 0 auto 6px; border: 1px solid var(--gold-main);
-            border-radius: 13px; display: flex; align-items: center; justify-content: center;
-            background: rgba(214, 173, 103, 0.09); font-size: 19px;
-        }
-        .aba-gift-eyebrow {
-            font-family: 'Playfair Display', serif; letter-spacing: 1.8px; text-transform: uppercase;
-            font-size: 0.65rem; font-weight: 700; color: var(--gold-mid);
-        }
-        .aba-gift-title { font-family: 'Moul', cursive; font-size: 0.93rem; line-height: 1.8; color: var(--gold-light); }
-        .aba-gift-subtitle { font-size: 0.69rem; color: rgba(255, 243, 239, 0.75); margin-top: 2px; }
-        .aba-gift-divider { display: flex; align-items: center; gap: 10px; margin: 8px 0 12px; color: var(--gold-main); }
-        .aba-gift-divider::before, .aba-gift-divider::after { content: ''; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, var(--gold-main), transparent); }
-        .aba-gift-divider span { font-size: 12px; }
-        .aba-gift-body {
-            display: flex; align-items: stretch; gap: 10px; padding: 10px;
-            border: 1px solid rgba(125, 177, 242, 0.72); border-radius: 17px;
-            background: linear-gradient(135deg, #173c78 0%, #102956 100%);
-        }
-        .aba-gift-info { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; text-align: left; color: #fff; }
-        .aba-brand-row { display: flex; align-items: center; gap: 7px; margin-bottom: 12px; }
-        .aba-brand-mark {
-            background: #fff; color: #f3c746; border-radius: 7px; padding: 3px 6px;
-            font-size: 0.85rem; line-height: 1.2; font-weight: 900; font-style: italic; letter-spacing: -1px;
-        }
-        .aba-brand-name { font-size: 0.72rem; font-weight: 900; letter-spacing: 0.6px; line-height: 1.25; }
-        .aba-brand-name small { display: block; font-size: 0.53rem; font-weight: 500; letter-spacing: 0; opacity: 0.82; }
-        .aba-gift-recipient-label { color: #bdcff4; font-size: 0.63rem; margin-bottom: 2px; }
-        .aba-gift-recipient { color: #fff; font-size: 0.74rem; font-weight: 800; line-height: 1.5; overflow-wrap: anywhere; }
-        .aba-gift-instructions { color: #d9e6ff; font-size: 0.62rem; line-height: 1.6; margin-top: 8px; }
-        .aba-qr-box {
-            width: 118px; min-width: 118px; min-height: 118px; padding: 7px;
-            background: #fff; border-radius: 13px; display: flex; align-items: center; justify-content: center;
-            color: #1b3261; text-align: center; overflow: hidden;
-        }
-.aba-qr-box img { width: 100%; height: 100%; max-height: 150px; aspect-ratio: 1 / 1; object-fit: contain; display: none; }
-        .aba-qr-box { flex-shrink: 0; }
-        .aba-qr-placeholder { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 100%; min-height: 104px; }
-        .aba-qr-placeholder .qr-symbol { font-size: 2.6rem; line-height: 1; color: #d7aa3f; }
-        .aba-qr-placeholder strong { font-size: 0.62rem; line-height: 1.4; }
-        .aba-qr-placeholder small { font-size: 0.49rem; line-height: 1.5; color: #66718a; }
-        .aba-gift-footer { text-align: center; color: rgba(255, 231, 189, 0.8); font-size: 0.61rem; line-height: 1.6; margin-top: 10px; }
-        @media (max-width: 360px) {
-            .aba-gift-card { padding: 10px; }
-            .aba-gift-body { gap: 7px; padding: 7px; }
-            .aba-qr-box { width: 102px; min-width: 102px; min-height: 102px; padding: 5px; }
-            .aba-qr-placeholder { min-height: 90px; }
-            .aba-brand-name { font-size: 0.66rem; }
+        #page4 .memory-hero .slide:hover img {
+            transform: scale(1.025);
         }
 
-        /* Floating Butterfly Animation */
-        #butterfly-container { position: fixed; inset: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 9999; overflow: hidden; }
-        .flying-butterfly { position: absolute; left: 0; top: 0; width: var(--size); height: var(--size); animation: naturalButterflyFlight var(--duration) cubic-bezier(.42,0,.58,1) var(--delay) infinite; }
-        .butterfly-inner { width: 100%; height: 100%; background-image: url('backgrund/butterfly.png'); background-size: contain; background-repeat: no-repeat; opacity: var(--opacity); animation: butterflyWings var(--wing-speed) ease-in-out infinite; }
-        
-        @keyframes naturalButterflyFlight {
-            0% { transform: translate3d(var(--x0), var(--y0), 0) rotate(var(--r0)) scale(var(--scale)); opacity: 0; }
-            10% { opacity: var(--opacity); }
-            90% { opacity: var(--opacity); }
-            100% { transform: translate3d(var(--x6), var(--y6), 0) rotate(var(--r6)) scale(var(--scale)); opacity: 0; }
+        #page4 .gallery-tip {
+            padding: 4px 8px 10px;
+            margin: 0;
+            font-size: .7rem;
+            opacity: .78;
         }
-        @keyframes butterflyWings { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(0.4); } }
-    
-    </style>
+
+        #page4 .gallery-tip::before {
+            content: '↓  ';
+            font-size: 1rem;
+        }
+
+        @media (max-width: 380px) {
+            #page4 .memory-hero .slide {
+                height: 300px;
+                margin-bottom: 14px;
+            }
+        }
+
+
+        /* =========================================================
+           PHONE-ONLY CARD SIZE — SAME SIZE ON PHONE / TABLET / PC
+           The invitation card keeps a mobile-phone layout everywhere.
+           ========================================================= */
+        .invitation-card {
+            width: 390px !important;
+            min-width: 390px !important;
+            max-width: 390px !important;
+            height: 844px !important;
+            min-height: 844px !important;
+            max-height: 844px !important;
+            padding: 2rem 1.2rem !important;
+            flex: 0 0 390px;
+        }
+
+        /* Disable the old desktop 2-column layout. */
+        @media screen and (min-width: 900px) {
+            .invitation-card {
+                width: 390px !important;
+                min-width: 390px !important;
+                max-width: 390px !important;
+                height: 844px !important;
+                min-height: 844px !important;
+                max-height: 844px !important;
+                padding: 2rem 1.2rem !important;
+            }
+
+            .page.active {
+                display: flex !important;
+                grid-template-columns: none !important;
+                gap: 0 !important;
+                align-items: stretch !important;
+            }
+
+            .btn-group {
+                grid-column: auto !important;
+            }
+        }
+
+        /* On very small screens, shrink only when necessary so the card
+           never gets cut off horizontally. The phone layout is preserved. */
+        @media screen and (max-width: 430px) {
+            .invitation-card {
+                width: calc(100vw - 2rem) !important;
+                min-width: 0 !important;
+                max-width: 390px !important;
+                flex-basis: auto;
+            }
+        }
+
+
+/* === Phone card size: 9:16, matching the reference image === */
+.invitation-card {
+    width: 486px !important;
+    min-width: 486px !important;
+    max-width: 486px !important;
+    height: 864px !important;
+    min-height: 864px !important;
+    max-height: 864px !important;
+    aspect-ratio: 9 / 16 !important;
+    flex: 0 0 486px !important;
+}
+
+/* On desktop/tablet, keep the same phone proportion and disable desktop 2-column layout. */
+@media (min-width: 900px) {
+    .invitation-card {
+        width: 486px !important;
+        min-width: 486px !important;
+        max-width: 486px !important;
+        height: 864px !important;
+        min-height: 864px !important;
+        max-height: 864px !important;
+        flex: 0 0 486px !important;
+    }
+
+    .page.active {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important;
+        gap: 0 !important;
+        align-items: stretch !important;
+    }
+
+    .btn-group {
+        grid-column: auto !important;
+    }
+}
+
+/* Smaller screens: scale the same 9:16 card down instead of changing its proportion. */
+@media (max-width: 520px) {
+    .invitation-card {
+        width: calc(100vw - 1rem) !important;
+        min-width: 0 !important;
+        max-width: 486px !important;
+        height: calc((100vw - 1rem) * 16 / 9) !important;
+        min-height: 0 !important;
+        max-height: calc((100vw - 1rem) * 16 / 9) !important;
+        flex: 0 1 auto !important;
+    }
+}
+
+@media (max-height: 880px) and (min-width: 521px) {
+    .invitation-card {
+        height: 100vh !important;
+        max-height: 100vh !important;
+        width: calc(100vh * 9 / 16) !important;
+        max-width: calc(100vh * 9 / 16) !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+        flex: 0 1 auto !important;
+    }
+}
+
+
+
+/* =========================================================
+   GOLD THEME — ALL TEXT + FRONT LOGO
+   Keeps the existing layout/card size and photo treatment.
+   ========================================================= */
+:root {
+    --silver-1: #fff6cf;
+    --silver-2: #f4d878;
+    --silver-3: #d4af37;
+    --silver-4: #b8860b;
+    --silver-5: #8a6508;
+    --silver-6: #e2bf4f;
+    --silver-7: #6f5006;
+    --primary-gold: #d4af37;
+    --dark-gold: #8a6508;
+    --border-color: rgba(212, 175, 55, 0.48);
+    --text-light: #f7dc82;
+    --text-gold: #f4d878;
+    --glow-gold: rgba(212, 175, 55, 0.28);
+    --text-formal: #e8c85b;
+}
+
+/* Recolor regular text throughout the invitation to gold. */
+.invitation-card,
+.invitation-card p,
+.invitation-card span,
+.invitation-card h1,
+.invitation-card h2,
+.invitation-card h3,
+.invitation-card h4,
+.invitation-card h5,
+.invitation-card h6,
+.invitation-card a,
+.invitation-card .event-name,
+.invitation-card .gallery-heading p,
+.invitation-card .gallery-tip {
+    color: #f4d878;
+}
+
+/* Preserve the original metallic multi-tone typography, but in gold. */
+.header-title,
+.formal-title,
+.guest-label,
+.couple-names-front span,
+.main-couple-name-formal,
+.agenda-divider,
+.program-day-title,
+.time-badge,
+.section-title,
+.highlight-date-formal,
+.sub-title,
+.wedding-date-front {
+    background: linear-gradient(
+        180deg,
+        #fff7c9 0%,
+        #f5d96f 16%,
+        #b8860b 34%,
+        #ffeaa1 50%,
+        #9c6f08 68%,
+        #f3d66b 84%,
+        #6f5006 100%
+    ) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    text-shadow: 0 1px 8px rgba(212,175,55,0.22) !important;
+}
+
+/* Parents' names and special gold fields. */
+.parent-name,
+.parents-name,
+.father-name,
+.mother-name,
+.parent-info,
+.parents-info,
+.family-name,
+.guest-name {
+    background: linear-gradient(
+        90deg,
+        #6f5006 0%,
+        #9c6f08 18%,
+        #ffeaa1 38%,
+        #f6d975 52%,
+        #b8860b 70%,
+        #fff0ae 100%
+    ) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    text-shadow: 0 0 7px rgba(212,175,55,.18) !important;
+}
+
+/* Gold borders/lines used around text and components. */
+.invitation-card::before,
+.invitation-card::after,
+.photo-frame,
+.bio-side img,
+.program-day-title {
+    border-color: #d4af37 !important;
+}
+
+.agenda-divider::before,
+.agenda-divider::after {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #b8860b,
+        #fff0ad,
+        #d4af37,
+        #fff0ad,
+        #b8860b,
+        transparent
+    ) !important;
+}
+
+/* Front logo: keep the original PNG image mask, recolored in gold. */
+.page1-logo {
+    background: linear-gradient(
+        180deg,
+        #fff7c9 0%,
+        #f5d96f 12%,
+        #b8860b 27%,
+        #ffeaa1 42%,
+        #d4af37 57%,
+        #8a6508 73%,
+        #f3d66b 88%,
+        #fff7c9 100%
+    ) !important;
+    filter:
+        drop-shadow(0 0 3px rgba(255,235,150,.95))
+        drop-shadow(0 0 9px rgba(212,175,55,.62))
+        drop-shadow(0 0 18px rgba(255,220,100,.28)) !important;
+}
+
+.page1-logo::after {
+    background: linear-gradient(
+        115deg,
+        transparent 20%,
+        rgba(255,255,255,0) 34%,
+        rgba(255,248,200,.95) 45%,
+        rgba(255,255,255,0) 56%,
+        transparent 76%
+    ) !important;
+}
+
+.page1-logo-frame .corner {
+    border-color: #d4af37 !important;
+}
+
+.wax-seal-btn {
+    box-shadow: 0 0 25px rgba(212,175,55,.45), inset 0 2px 5px rgba(255,255,255,.35) !important;
+}
+
+.wedding-date-front,
+.scroll-hint,
+.invitation-intro,
+.btn-secondary,
+.icon-btn {
+    color: #f4d878 !important;
+}
+
+.icon-btn {
+    background: rgba(212,175,55,0.18) !important;
+    border-color: #d4af37 !important;
+}
+
+
+/* Remaining text elements: gold as well. */
+.guest-name-inner,
+.btn,
+.couple-names-front,
+.invitation-text,
+.date-location-block-formal,
+.content-container-formal,
+.bio-side h3,
+.bio-side p,
+.gallery-counter,
+.gallery-arrow,
+.memory-thumb.active {
+    color: #f4d878 !important;
+}
+
+.btn {
+    background: linear-gradient(135deg, #3a2a08, #6f5006) !important;
+    border: 1px solid #d4af37 !important;
+    box-shadow: 0 0 12px rgba(212,175,55,.18);
+}
+
+.btn-secondary {
+    background: rgba(212,175,55,.08) !important;
+    border-color: #d4af37 !important;
+}
+
+.guest-name-inner {
+    background: rgba(20, 14, 2, 0.9) !important;
+    border: 1px solid rgba(212,175,55,.35);
+}
+
+.bio-side {
+    border-color: rgba(212,175,55,.38) !important;
+}
+
+.gallery-counter,
+.gallery-arrow {
+    border-color: rgba(212,175,55,.55) !important;
+}
+
+.memory-thumb.active {
+    border-color: #d4af37 !important;
+    box-shadow: 0 0 0 1px #8a6508, 0 0 14px rgba(212,175,55,.24) !important;
+}
+
+</style>
 </head>
 <body>
-    <!-- Falling petals -->
+
+    <!-- Falling Petals Container -->
     <div id="petal-container"></div>
 
-    <!-- Background image: asset path and filename follow index(4).html -->
+    <!-- Background Media -->
     <img src="backgrund/IMG_1005.jpg" class="bg-media" alt="Background">
 
-    <!-- Music control -->
-    <div class="top-controls">
-        <button class="icon-btn music-btn" id="musicToggle" onclick="toggleMusic(event)" aria-label="បើក ឬបិទតន្ត្រី">🎵</button>
-    </div>
-    <audio id="bgMusic" loop preload="auto">
-        <source src="backgrund/wedding-song.mp3" type="audio/mpeg">
-    </audio>
+    <!-- Invitation Card Container -->
+    <div class="invitation-card">
 
-    <!-- Floating butterflies -->
-    <div id="butterfly-container"></div>
+        <!-- Sticky music control: visible on every section while scrolling -->
+        <div class="top-controls" aria-label="ការគ្រប់គ្រងចម្រៀង">
+            <button class="icon-btn music-btn" id="musicToggle" type="button"
+                    onclick="toggleMusic()" aria-label="បើកចម្រៀង" aria-pressed="false"
+                    title="បើក/បិទចម្រៀង">🎵</button>
+        </div>
 
-    <!-- Invitation in the vertical-scroll format of index(3).html -->
-    <main class="invitation-card">
-        <!-- SECTION 1: Cover -->
-        <section class="scroll-section" id="section1">
-            <div class="header-title">សិរីមង្គលអាពាហ៍ពិពាហ៍</div>
-            <div class="sub-title">Save The Date</div>
-            <div class="page1-logo" role="img" aria-label="Wedding Logo"></div>
+        <audio id="bgMusic" loop preload="auto">
+            <source src="backgrund/wedding-song.mp3" type="audio/mpeg">
+        </audio>
 
-            <div class="guest-invitation-container">
-                <div class="guest-label">សូមគោរពអញ្ជើញ</div>
-                <div class="guest-name-box">
-                    <div class="guest-name-inner" id="guestName">ជូនចំពោះ លីម៉ី បោះពុម្ព</div>
+        <div class="invitation-scroll" id="invitationScroll" aria-label="ទំព័រលិខិតអញ្ជើញ">
+
+        <!-- PAGE 1 (Interactive Wax Seal Envelope Cover) -->
+        <div class="page active" id="page1">
+            <div class="envelope-cover">
+                <div class="header-title" data-i18n="p1_title">សិរីមង្គលអាពាហ៍ពិពាហ៍</div>
+                <div class="sub-title">Save The Date</div>
+                
+                <div class="page1-logo-frame">
+                    <span class="corner c1"></span><span class="corner c2"></span>
+                    <span class="corner c3"></span><span class="corner c4"></span>
+                    <div class="page1-logo" role="img" aria-label="Wedding Logo"></div>
+                </div>
+
+                <!-- Guest Badge -->
+                <div class="guest-invitation-container">
+                    <div class="guest-label" data-i18n="p1_invite_label">សូមគោរពអញ្ជើញ</div>
+                    <div class="guest-name-box">
+                        <div class="guest-name-inner" id="guestName">
+                            ជូនចំពោះ លីម៉ី បោះពុម្ព
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Wax Seal Button to Open Invitation -->
+                <div class="wax-seal-btn" onclick="openInvitation()" title="ចុចទីនេះដើម្បីបើកសំបុត្រ">
+                    <span>💌</span>
+                </div>
+                <div class="envelope-instruction">ចុចលើត្រាដើម្បីបើកលិខិតអញ្ជើញ</div>
+
+                <div class="wedding-date-front" data-i18n="p1_date" style="margin-top: 1rem;">
+                    ថ្ងៃចន្ទ ទី៣០ ខែវិច្ឆិកា ឆ្នាំ២០២៦ វេលាម៉ោង ៥:០០ ល្ងាច
+                    <div>ស្ថិតនៅ  មជ្ឈមណ្ឌលសុភមង្គល (អគារA+B) ក្រុងបាត់ដំបង  <div>
+<div>ខេត្តបាត់ដំបង</div></div></div>
                 </div>
             </div>
+        </div>
 
-            <div class="wedding-date-front">
-                ថ្ងៃចន្ទ ទី៣០ ខែវិច្ឆិកា ឆ្នាំ២០២៦ វេលាម៉ោង ៥:០០ ល្ងាច
-                <div>មជ្ឈមណ្ឌលសុភមង្គល (អគារ A+B)</div>
-                <div>ក្រុងបាត់ដំបង ខេត្តបាត់ដំបង</div>
-            </div>
+        <!-- PAGE 2 (Formal & Agenda) -->
+        <div class="page" id="page2" onscroll="handleScrollAnimation()">
+            
+            <!-- Butterfly Container -->
+            <div id="butterfly-container"></div>
 
-            <div class="scroll-down-hint">អូសចុះក្រោមដើម្បីមើលលិខិតអញ្ជើញ ☟</div>
-        </section>
-
-        <!-- SECTION 2: Formal invitation and schedule -->
-        <section class="scroll-section" id="section2">
             <div class="content-container-formal">
-                <div class="formal-title">សិរីមង្គលអាពាហ៍ពិពាហ៍</div>
-
+                <div class="formal-title" data-i18n="p2_title">សិរីមង្គលអាពាហ៍ពិពាហ៍</div>
                 <div class="parents-block">
                     <div class="parents-side">
-                        <p class="parent-name">លោក ឌិន ប៊ុណ្ណា</p>
-                        <p class="parent-name">លោកស្រី លាង គីម</p>
+                        <p class="parent-name" data-i18n="p2_g_father">លោក ឌិន ប៊ុណ្ណា</p>
+                        <p class="parent-name" data-i18n="p2_g_mother">លោកស្រី លាង គឹម</p>
                     </div>
                     <div class="parents-side">
-                        <p class="parent-name">លោក សៀង យ៉ឹងខាន់</p>
-                        <p class="parent-name">លោកស្រី សុខ ឡាង</p>
+                        <p class="parent-name" data-i18n="p2_b_father">លោក សៀង យុឹងខាត់</p>
+                        <p class="parent-name" data-i18n="p2_b_mother">លោកស្រី សុខ ឡាង</p>
                     </div>
                 </div>
-
-                <p class="invitation-intro">សូមគោរពអញ្ជើញ</p>
-                <p class="invitation-text">ឯកឧត្តម អ្នកឧកញ៉ា លោកឧកញ៉ា លោកជំទាវ លោក លោកស្រី អ្នកនាងកញ្ញា អញ្ជើញចូលរួមជាអធិបតីភាព និងជាភ្ញៀវកិត្តិយសក្នុងកម្មវិធីសិរីមង្គលអាពាហ៍ពិពាហ៍កូនប្រុស កូនស្រីរបស់យើងខ្ញុំ។</p>
-
+               
+                <p class="invitation-intro" data-i18n="p2_intro">សូមគោរពអញ្ជើញ</p>
+                <p class="invitation-text" data-i18n="p2_desc">ឯកឧត្តម អ្នកឧកញ៉ា លោកឧកញ៉ា លោកជំទាវ លោក លោកស្រី អ្នកនាងកញ្ញា អញ្ជើញចូលរួមជាអធិបតីភាព និងជាភ្ញៀវកិត្តិយសក្នុងកម្មវិធីសិរីមង្គលអាពាហ៍ពិពាហ៍កូនប្រុស កូនស្រីរបស់យើងខ្ញុំ។</p>
+                
                 <div class="couple-names-block-formal">
                     <div class="couple-side-formal">
                         <span class="couple-name-label">កូនប្រុសនាម</span>
-                        <p class="main-couple-name-formal">ជា អានន្ទ</p>
+                        <p class="main-couple-name-formal" data-i18n="groom_name">ជា អានន្ទ</p>
                     </div>
                     <div class="couple-side-formal">
                         <span class="couple-name-label">កូនស្រីនាម</span>
-                        <p class="main-couple-name-formal">សៀង សាយជីញ</p>
+                        <p class="main-couple-name-formal" data-i18n="bride_name">សៀង សាយលីញ</p>
+                    </div>
+                </div>
+                
+                <div class="date-location-block-formal">
+                    <p><span data-i18n="p2_loc_prefix">ដែលនឹងប្រព្រឹត្តទៅនៅ</span><br>
+                    <span class="highlight-date-formal" data-i18n="p2_date">ថ្ងៃចន្ទ ទី៣០ ខែវិច្ឆិកា ឆ្នាំ២០២៦ <div></div>ត្រូវនឹងថ្ងៃ ៦រោច ខែកត្តិក ឆ្នាំថោះ អដ្ឋស័ក ព.ស. ២៥៧០ វេលាម៉ោង ៥:០០ ល្ងាច</span><br>
+                    <span data-i18n="p2_loc_text">ស្ថិតនៅ </span> <a href="https://maps.app.goo.gl/GoYLBuUJhoxCxAig7" target="_blank" style="color: var(--primary-gold); text-decoration: underline;" data-i18n="p2_venue">ស្ថិតនៅ មជ្ឈមណ្ឌលសុភមង្គល (អគារA+B) ក្រុងបាត់ដំបង ខេត្តបាត់ដំបង </a></p>
+                </div>
+
+                <div class="scroll-hint">
+                    <span data-i18n="p2_scroll_hint">អូសចុះក្រោមដើម្បីមើលកម្មវិធី</span> ☟
+                </div>
+
+                <!-- Program Agenda / Timeline -->
+                <div class="agenda-divider" data-i18n="p2_agenda_title">សិរីមង្គលអាពាហ៍ពិពាហ៍</div>
+
+                <!-- DAY 1 -->
+                <div class="program-day-title" data-i18n="p2_day1_title">កម្មវិធីថ្ងៃទី១ ៖ ថ្ងៃអាទិត្យ ទី២៩ ខែវិច្ឆិកា ឆ្នាំ២០២៦</div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d2_t7">ម៉ោង ០៣:០០ នាទីរសៀល</div>
+                        <div class="event-name" data-i18n="p2_d2_e7">ពិធីសែនក្រុងពាលី</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d1_t1">ម៉ោង ០៤:០០ នាទីរសៀល</div>
+                        <div class="event-name" data-i18n="p2_d1_e1">ពិធីសូត្រមន្តចម្រើនព្រះបរិត្ត</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d1_t1">ម៉ោង ០៥:០០ នាទីល្ងាច</div>
+                        <div class="event-name" data-i18n="p2_d1_e1">ពិធីជាវខាន់ស្លា</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d1_t1">ម៉ោង ០៦:០០ នាទីល្ងាច</div>
+                        <div class="event-name" data-i18n="p2_d1_e1">អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារពេលល្ងាច</div>
                     </div>
                 </div>
 
-                <div style="margin-top: 1rem;">
-                    <p>
-                        <span>ដែលនឹងប្រព្រឹត្តទៅនៅ</span><br>
-                        <span class="highlight-date-formal">ថ្ងៃចន្ទ ទី៣០ ខែវិច្ឆិកា ឆ្នាំ២០២៦<br>ត្រូវនឹងថ្ងៃ ៦រោច ខែកត្តិក ឆ្នាំថោះ អដ្ឋស័ក ព.ស. ២៥៧០ វេលាម៉ោង ៥:០០ ល្ងាច</span><br>
-                        <span>ស្ថិតនៅ </span>
-                        <a href="https://maps.app.goo.gl/GoYLBuUJhoxCxAig7" target="_blank" rel="noopener" style="color: var(--gold-mid); text-decoration: underline;">មជ្ឈមណ្ឌលសុភមង្គល (អគារ A+B) ក្រុងបាត់ដំបង ខេត្តបាត់ដំបង</a>
-                    </p>
-                </div>
-
-                <div class="scroll-down-hint" style="margin-top: 1.2rem;">អូសចុះក្រោមដើម្បីមើលកម្មវិធី ☟</div>
-                <div class="agenda-divider">សិរីមង្គលអាពាហ៍ពិពាហ៍</div>
-
-                <div class="program-day-title">កម្មវិធីថ្ងៃទី១ ៖ ថ្ងៃអាទិត្យ ទី២៩ ខែវិច្ឆិកា ឆ្នាំ២០២៦</div>
+                <!-- DAY 2 -->
+                 <div class="program-day-title" data-i18n="p2_day1_title">កម្មវិធីថ្ងៃទី២ ៖ ថ្ងៃចន្ទ ទី៣០ ខែវិច្ឆិកា ឆ្នាំ២០២៦</div>
                 <div class="timeline">
-                    <div class="timeline-item"><span class="time-badge">ម៉ោង ០៣:០០ នាទីរសៀល</span><div class="event-name">ពិធីសែនក្រុងពាលី</div></div>
-                    <div class="timeline-item"><span class="time-badge">ម៉ោង ០៤:០០ នាទីរសៀល</span><div class="event-name">ពិធីសូត្រមន្តចម្រើនព្រះបរិត្ត</div></div>
-                    <div class="timeline-item"><span class="time-badge">ម៉ោង ០៥:០០ នាទីល្ងាច</span><div class="event-name">ពិធីជាវខាន់ស្លា</div></div>
-                    <div class="timeline-item"><span class="time-badge">ម៉ោង ០៦:០០ នាទីល្ងាច</span><div class="event-name">អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារពេលល្ងាច</div></div>
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ០៦:៣០ នាទីព្រឹក</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">ជួបជុំភ្ញៀវកិត្តិយសរៀបចំហែជំនូន</div>
+                    </div>
                 </div>
-
-                <div class="program-day-title">កម្មវិធីថ្ងៃទី២ ៖ ថ្ងៃចន្ទ ទី៣០ ខែវិច្ឆិកា ឆ្នាំ២០២៦</div>
                 <div class="timeline">
-                    <div class="timeline-item"><span class="time-badge">ម៉ោង ០៦:៣០ នាទីព្រឹក</span><div class="event-name">ជួបជុំភ្ញៀវកិត្តិយសរៀបចំហែជំនូន</div></div>
-                    <div class="timeline-item"><span class="time-badge">ម៉ោង ០៧:០០ នាទីព្រឹក</span><div class="event-name">ពិធីហែកំណត់ (ជំនូន) ចូលរោងជ័យ</div></div>
-                    <div class="timeline-item"><span class="time-badge">ម៉ោង ០៧:៣០ នាទីព្រឹក</span><div class="event-name">ពិធីនិយាយជើងការ រៀបរាប់ផ្លែឈើ</div></div>
-                    <div class="timeline-item"><span class="time-badge">ម៉ោង ០៨:០០ នាទីព្រឹក</span><div class="event-name">ពិធីប៉ោយកុងម៉ា និងបំពាក់ចិញ្ចៀន</div></div>
-                    <div class="timeline-item"><span class="time-badge">ម៉ោង ០៩:០០ នាទីព្រឹក</span><div class="event-name">ពិធីកាត់សក់បង្កក់សិរី ចម្រើនកេសា</div></div>
-                    <div class="timeline-item"><span class="time-badge">ម៉ោង ១១:០០ នាទីព្រឹក</span><div class="event-name">ពិធីសំពះផ្ទឹម សែនចងដៃ ព្រះថោងតោងស្បៃ។</div></div>
-                    <div class="timeline-item"><span class="time-badge">ម៉ោង ១២:០០ ថ្ងៃត្រង់</span><div class="event-name">អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារថ្ងៃត្រង់។</div></div>
-                    <div class="timeline-item"><span class="time-badge">ម៉ោង ០៥:០០ ល្ងាច</span><div class="event-name">ទទួលបដិសណ្ឋារកិច្ចភ្ញៀវកិត្តិយសពិសាអាហារពេលល្ងាច សូមអរគុណ។</div></div>
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ០៧:០០ នាទីព្រឹក</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">ពិធីហែកំណត់ (ជំនូន) ចូលរោងជ័យ</div>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ០៧:៣០ នាទីព្រឹក</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">ពិធីនិយាយជើងការ រៀបរាប់ផ្លែឈើ</div>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ០៨:០០ នាទីព្រឹក</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">ពិធីប៉ោយកុងម៉ា និងបំពាក់ចិញ្ចៀន</div>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ០៩:០០ នាទីព្រឹក</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">ពិធីកាត់សក់បង្កក់សិរី ចម្រើនកេសា</div>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ១១:០០ នាទីព្រឹក</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">ពិធីសំពះផ្ទឹម សែនចងដៃ ព្រះថោងតោងស្បៃ។</div>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ១២:០០ ថ្ងៃត្រង់</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារថ្ងៃត្រង់។</div>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-badge" data-i18n="p2_d2_t8">ម៉ោង ០៥:០០ ល្ងាច</div>
+                        <div class="event-name" data-i18n="p2_d2_e8">ទទួលបដិសណ្ឋារកិច្ចភ្ញៀវកិត្តិយសពិសាអាហារពេលល្ងាច សូមអរគុណ។</div>
+                    </div>
                 </div>
 
-                <p style="margin-top: 1.5rem; color: var(--gold-mid); font-size: 0.82rem;">ដោយមេត្រីភាព។ សូមអរគុណ !</p>
+                <p style="margin-top: 1.5rem; color: var(--text-gold); font-size: 0.8rem;" data-i18n="p2_thanks">ដោយមេត្រីភាព។ សូមអរគុណ !</p>
             </div>
-        </section>
+</div>
 
-        <!-- SECTION 3: Couple photos -->
-        <section class="scroll-section" id="section3">
+        <!-- PAGE 3 (Bride & Groom) -->
+        <div class="page" id="page3">
             <div class="photo-frame">
-                <img src="/backgrund/1.jpg" alt="Couple Main Photo" id="mainCoupleImg">
+                <img id="mainCoupleImg" src="/backgrund/1.jpg" alt="Couple Main Photo">
             </div>
             <div class="couple-bio-block">
                 <div class="bio-side">
-                    <div class="avatar-frame"><img src="backgrund/IMG_1020.jpg" alt="Groom"></div>
-                    <h3>ជា អានន្ទ</h3>
-                    <p>កូនកំលោះ</p>
+                    <img src="backgrund/IMG_1020.jpg" alt="Groom">
+                    <h3 data-i18n="groom_name">ជា អានន្ទ</h3>
+                    <p data-i18n="groom_label">កូនកំលោះ</p>
                 </div>
                 <div class="bio-side">
-                    <div class="avatar-frame"><img src="backgrund/IMG_1086.jpg" alt="Bride"></div>
-                    <h3>សៀង សាយជីញ</h3>
-                    <p>កូនក្រមុំ</p>
+                    <img src="backgrund/IMG_1086.jpg" alt="Bride">
+                    <h3 data-i18n="bride_name">សៀង សាយលីញ</h3>
+                    <p data-i18n="bride_label">កូនក្រមុំ</p>
                 </div>
             </div>
-        </section>
+</div>
 
-        <!-- SECTION 4: Gallery photos from index(4).html -->
-        <section class="scroll-section" id="section4">
-            <div class="gallery-heading"><h3>អាល់ប៊ុមរូបភាពអនុស្សាវរីយ៍</h3></div>
-            <div class="gallery-list">
-                <div class="gallery-item"><img src="/backgrund/3.jpg" alt="Photo 1"></div>
-                <div class="gallery-item"><img src="backgrund/IMG_1009.jpg" alt="Photo 2"></div>
-                <div class="gallery-item"><img src="backgrund/IMG_1005.jpg" alt="Photo 3"></div>
-                <div class="gallery-item"><img src="/backgrund/4.jpg" alt="Photo 4"></div>
-                <div class="gallery-item"><img src="backgrund/IMG_1020.jpg" alt="Photo 5"></div>
-                <div class="gallery-item"><img src="/backgrund/IMG_1086.jpg" alt="Photo 6"></div>
-                <div class="gallery-item"><img src="/backgrund/2.jpg" alt="Photo 7"></div>
-            </div>
-        </section>
-
-        <!-- SECTION 5: Event location and business contact -->
-        <section class="scroll-section" id="section5">
-            <div style="margin-bottom: 12px; text-align: center;">
-                <div class="section-title" style="font-family: 'Moul', cursive; font-size: 0.95rem; margin-bottom: 4px;">ទីតាំងកម្មវិធី</div>
-                <p style="font-size: 0.8rem; opacity: 0.9;">សូមអញ្ជើញភ្ញៀវកិត្តិយសអញ្ជើញមកកាន់ទីតាំងកម្មវិធីតាមផែនទីខាងក្រោម</p>
+        <!-- PAGE 4 (Elegant Memory Gallery) -->
+        <div class="page" id="page4">
+            <div class="gallery-heading">
+                <h3> អាល់ប៊ុមរូបភាពអនុស្សាវរីយ៍</h3>
+                <p></p>
             </div>
 
-            <div class="location-card-final">
-                <div class="location-map-wrap">
-                    <iframe class="location-map-iframe"
-                        src="https://www.google.com/maps?q=%E1%9E%98%E1%9E%87%E1%9F%92%E1%9E%87%E1%9E%98%E1%9E%8E%E1%9F%92%E1%9E%8C%E1%9E%9B%E1%9E%9F%E1%9E%BB%E1%9E%97%E1%9E%98%E1%9E%84%E1%9F%92%E1%9E%82%E1%9E%9B+%E1%9E%94%E1%9E%B6%E1%9E%8F%E1%9F%8B%E1%9E%8A%E1%9F%86%E1%9E%94%E1%9E%84&amp;output=embed"
-                        title="Google Map — មជ្ឈមណ្ឌលសុភមង្គល បាត់ដំបង" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <div class="memory-hero">
+                <div class="slider-wrapper" id="slider" style="display:flex; transition:transform .45s ease;">
+                    <div class="slide"><img src="/backgrund/5.jpg" alt="Photo 1"></div>
+                    <div class="slide"><img src="backgrund/IMG_1009.jpg" alt="Photo 2"></div>
+                    <div class="slide"><img src="backgrund/IMG_1005.jpg" alt="Photo 3"></div>
+                   <div class="slide"><img src="/backgrund/4.jpg" alt="Photo 4"></div>
+                    <div class="slide"><img src="/backgrund/3.jpg" alt="Photo 5"></div>
+                    <<div class="slide"><img src="/backgrund/6.jpg" alt="Photo 6"></div>
+                    <div class="slide"><img src="/backgrund/2.jpg" alt="Photo 7"></div>
+                    <div class="slide"><img src="/backgrund/7.jpg" alt="Photo 7"></div>
                 </div>
-                <div class="location-details-final">
-                    <span class="location-pin-final">📍</span>
-                    <div class="location-text-final">
-                        <div class="location-name-final">មជ្ឈមណ្ឌលសុភមង្គល</div>
-                        <div class="location-address-final">(អគារ A+B) ក្រុងបាត់ដំបង ខេត្តបាត់ដំបង</div>
+
+                
+                
+                <div class="gallery-counter" id="galleryCounter">1 / 7</div>
+                <div class="slider-dots" id="sliderDots" style="display:flex;justify-content:center;gap:6px;position:absolute;bottom:9px;width:100%;z-index:3;"></div>
+            </div>
+</div>
+
+        <!-- PAGE 5: WEDDING DATE, DIGITAL GIFT QR, AND CONTACT DETAILS -->
+        <div class="page" id="page5">
+            <!-- Location card: shown above the wedding date/program information. -->
+            <section class="wedding-location-card" aria-label="ទីតាំងកម្មវិធីសិរីមង្គល">
+                <div class="location-heading">📍 ទីតាំងកម្មវិធីសិរីមង្គល</div>
+                <p class="location-intro">សូមអញ្ជើញមើលទីតាំងកម្មវិធីរបស់យើងខ្ញុំ</p>
+                <div class="location-map-frame">
+                    <iframe
+                        title="ផែនទី Google Maps — Sopheap Mongkol Centre Swimming Pool"
+                        src="https://maps.google.com/maps?q=Sopheap%20Mongkol%20Centre%20Swimming%20Pool%2C%20Battambang%2C%20Cambodia&amp;z=15&amp;output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="location-details">
+                    <span class="location-pin" aria-hidden="true">●</span>
+                    <div>
+                        <strong>Sopheap Mongkol Centre Swimming Pool</strong>
+                        <p>មជ្ឈមណ្ឌលសុភមង្គល (អគារ A+B) ក្រុងបាត់ដំបង ខេត្តបាត់ដំបង</p>
                     </div>
                 </div>
-                <a class="location-map-btn-final" href="https://maps.app.goo.gl/GoYLBuUJhoxCxAig7" target="_blank" rel="noopener">
-                    <span>🗺️ បើក Google Maps ទៅកាន់ទីតាំង</span>
-                </a>
+                <a class="location-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Sopheap%20Mongkol%20Centre%20Swimming%20Pool%2C%20Battambang%2C%20Cambodia" target="_blank" rel="noopener noreferrer">↗ បើក Google Maps ដើម្បីមើលផ្លូវ</a>
+            </section>
+
+            <div class="section-box date-section-box">
+                <div class="section-title">📅 កាលបរិច្ឆេទកម្មវិធីសិរីមង្គល</div>
+                <div class="date-main-line">នៅ ថ្ងៃចន្ទ ទី៣០ ខែវិច្ឆិកា ឆ្នាំ២០២៦</div>
+                <p class="date-detail-line">
+                    ត្រូវនឹងថ្ងៃ ៦រោច ខែកត្តិក ឆ្នាំថោះ អដ្ឋស័ក ព.ស. ២៥៧០<br>
+                    វេលាម៉ោង ៥:០០ ល្ងាច<br>
+                    មជ្ឈមណ្ឌលសុភមង្គល (អគារ A+B) ក្រុងបាត់ដំបង ខេត្តបាត់ដំបង
+                </p>
             </div>
 
-            <div class="section-box">
-                <div class="section-title">🏢 ព័ត៌មានទំនាក់ទំនងក្រុមហ៊ុន</div>
-                <div style="font-size: 0.78rem; color: var(--text-light); line-height: 1.6;">
-                    <p style="margin-bottom: 4px;">📌 <strong>ឈ្មោះ៖</strong> លីម៉ី បោះពុម្ព និងឌីសាញ (LYMEY Printing)</p>
-                    <p style="margin-bottom: 4px;">📞 <strong>ទូរស័ព្ទ៖</strong> 092 888 808</p>
-                    <p style="margin-bottom: 4px;">📍 <strong>ទីតាំង៖</strong> រាជធានីភ្នំពេញ</p>
-                    <p style="margin-bottom: 6px;">🌐 <strong>ហ្វេសប៊ុក៖</strong> LYMEY Printing</p>
-                    <div style="text-align: center; margin-top: 10px;">
-                        <a href="https://t.me/lymeybrand" target="_blank" rel="noopener" style="display: inline-block; background: linear-gradient(135deg, var(--gold-mid), var(--gold-main)); color: #35000d; padding: 7px 14px; border-radius: 6px; font-weight: bold; text-decoration: none; font-size: 0.75rem;">👉 ចូលរួមក្នុងក្រុមដើម្បីមើលម៉ូតធៀបថ្មីៗ</a>
-                    </div>
-                </div>
-            </div>
+            <section class="digital-gift-box" aria-label="អំណោយចំណងដៃតាម ABA">
+                <div class="gift-ornament" aria-hidden="true">✦ ✧ ✦</div>
+                <div class="gift-bank-label">ABA PAY</div>
+                <h2 class="gift-title">ចំណងដៃមង្គលការ</h2>
+                <p class="gift-subtitle">សូមស្កេន QR Code ដើម្បីផ្ញើចំណងដៃជូនគូស្វាមីភរិយា</p>
 
-            <!-- ABA DIGITAL GIFT: replace backgrund/aba-qr.png with your real ABA Mobile QR image -->
-            <div class="aba-gift-card" aria-label="ABA Bank digital wedding gift">
-                <div class="aba-gift-heading">
-                    <div class="aba-gift-icon" aria-hidden="true">🎁</div>
-                    <div class="aba-gift-eyebrow">Digital Wedding Gift</div>
-                    <div class="aba-gift-title">ចំណងដៃឌីជីថលមង្គលការ</div>
-                    <div class="aba-gift-subtitle">ABA Bank · សូមផ្ញើអំណោយជូនគូស្វាមីភរិយា</div>
-                </div>
-                <div class="aba-gift-divider"><span>✦</span></div>
-                <div class="aba-gift-body">
-                    <div class="aba-gift-info">
-                        <div class="aba-brand-row">
-                            <div class="aba-brand-mark">ABA</div>
-                            <div class="aba-brand-name">ABA BANK<small>Digital Gift</small></div>
+                <div class="gift-qr-frame">
+                    <div class="gift-qr-inner">
+                        <img id="abaGiftQR" src="/backgrund/SAYCHINH SIENG Cut Qr.png" alt="ABA Bank payment QR Code"
+                             onerror="this.hidden=true; document.getElementById('abaQrMissing').hidden=false;">
+                        <div id="abaQrMissing" class="qr-missing-message" hidden>
+                            <span class="qr-missing-icon" aria-hidden="true">▦</span>
+                            <strong>ABA QR Code</strong>
+                            <span>សូមដាក់រូប QR Code ABA ពិតនៅទីនេះ</span>
+                            <small>ឈ្មោះឯកសារ៖ backgrund/aba-qr.png</small>
                         </div>
-                        <div class="aba-gift-recipient-label">ឈ្មោះគណនីទទួលប្រាក់</div>
-                        <div class="aba-gift-recipient">SAYCHINH SIENG </div>
-                        <div class="aba-gift-instructions">សូមស្កេន QR Code ដោយប្រើ ABA Mobile ដើម្បីផ្ញើអំណោយ</div>
-                    </div>
-                    <div class="aba-qr-box">
-                        <div class="aba-qr-placeholder" id="abaQrPlaceholder">
-                            <span class="qr-symbol" aria-hidden="true">▦</span>
-                            <strong>ABA PAYMENT QR</strong>
-                            <small>ដាក់រូប QR របស់អ្នកជា<br><b>backgrund/aba-1.jpg</b></small>
-                        </div>
-                        <img id="abaQrImage" src="/backgrund/SAYCHINH SIENG Cut Qr.png" alt="ABA Payment QR" loading="lazy" onload="this.style.display='block'; document.getElementById('abaQrPlaceholder').style.display='none';" onerror="this.style.display='none'; document.getElementById('abaQrPlaceholder').style.display='flex';">
                     </div>
                 </div>
-                <a id="downloadAbaQr" class="page5-qr-download" href="/backgrund/SAYCHINH SIENG .png" download="SAYCHINH SIENG .png"
-                   style="display:block; margin:10px auto 0; text-align:center; color:var(--gold-light); font-size:0.75rem; text-decoration:underline;">
-                    ទាញយក QR
-                </a>
-                <div class="aba-gift-footer">សូមស្កេន QR Code ដើម្បីផ្ញើអំណោយមង្គលការ ❤️</div>
-            </div>
-        </section>
-    </main>
+                <p class="gift-thank-you">សូមអរគុណចំពោះទឹកចិត្តដ៏ប្រពៃ និងពរជ័យរបស់លោកអ្នក ❤️</p>
+                <div class="gift-bottom-ornament" aria-hidden="true">◆ ───────── ◆</div>
+            </section>
 
+            <div class="section-box contact-section-box">
+                <div class="section-title">🏢 ព័ត៌មានទំនាក់ទំនង</div>
+                <p>📌 <strong>ឈ្មោះ៖</strong> លីម៉ី បោះពុម្ព និងឌីសាញ (LYMEY Printing)</p>
+                <p>📞 <strong>ទូរស័ព្ទ៖</strong> 092 888 808</p>
+                <p>📍 <strong>ទីតាំង៖</strong> រាជធានីភ្នំពេញ</p>
+                <p>🌐 <strong>ហ្វេសប៊ុក៖</strong> LYMEY Printing</p>
+            </div>
+        </div>
+        </div><!-- /#invitationScroll -->
+
+    </div>
+
+    <style id="vertical-invitation-scroll-fix">
+        /* Golden frame remains on the outside of the card while the inner pages scroll. */
+        .invitation-card {
+            position: relative !important;
+            overflow: hidden !important;
+            isolation: isolate;
+            border: 3px solid #d4af37 !important;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,.8),
+                        0 0 0 1px rgba(255,232,150,.28),
+                        0 0 28px rgba(212,175,55,.28),
+                        inset 0 0 18px rgba(255,225,120,.09) !important;
+        }
+
+        /* One scroll viewport for all pages; the frame itself is outside this viewport. */
+        .invitation-scroll {
+            position: absolute !important;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 2rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            overflow-y: auto;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-gold) rgba(255,255,255,.08);
+            z-index: 10;
+        }
+
+        /* Keep the music switch pinned to the card, always above the frame. */
+        .invitation-card > .top-controls {
+            position: absolute !important;
+            top: 12px !important;
+            right: 12px !important;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: auto;
+            height: 42px;
+            margin: 0 !important;
+            padding: 0 !important;
+            z-index: 1001 !important;
+            pointer-events: none;
+        }
+        .invitation-card > .top-controls .music-btn {
+            position: relative;
+            z-index: 1002;
+            pointer-events: auto;
+            width: 42px;
+            height: 42px;
+            min-width: 42px;
+            border-radius: 50%;
+            background: rgba(65, 7, 20, .96) !important;
+            border: 1.5px solid #f4d878 !important;
+            color: #f4d878 !important;
+            box-shadow: 0 3px 14px rgba(0,0,0,.35), 0 0 12px rgba(212,175,55,.32);
+            font-size: 18px;
+        }
+        .invitation-card > .top-controls .music-btn:focus-visible {
+            outline: 2px solid #fff0ae;
+            outline-offset: 3px;
+        }
+
+        /* Persistent image frame. The filter tints the transparent frame artwork gold. */
+        .invitation-card::after {
+            content: "" !important;
+            display: block !important;
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100%;
+            height: 100%;
+            background: url("/backgrund/frame.png") center center / 100% 100% no-repeat !important;
+            filter: brightness(0) saturate(100%) invert(73%) sepia(86%) saturate(450%) hue-rotate(2deg) brightness(96%) contrast(95%) drop-shadow(0 0 3px rgba(212,175,55,.72));
+            pointer-events: none;
+            z-index: 50 !important;
+            opacity: 1;
+            border-radius: 21px;
+        }
+        /* Do not create a separate frame that scrolls along with each page. */
+        .invitation-card > .invitation-scroll > .page::after,
+        .invitation-card > .page::after {
+            content: none !important;
+            display: none !important;
+        }
+
+        /* After opening the envelope, all invitation pages flow vertically in one card. */
+        body.invitation-open .invitation-card {
+            overflow: hidden !important;
+        }
+        body.invitation-open .invitation-scroll {
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+        }
+        body.invitation-open .page {
+            display: flex !important;
+            position: relative;
+            width: 100% !important;
+            height: auto !important;
+            min-height: 0 !important;
+            max-height: none !important;
+            flex: 0 0 auto !important;
+            overflow: visible !important;
+            margin: 0 0 24px !important;
+            scroll-margin-top: 10px;
+            animation: fadeIn .4s ease-in-out;
+        }
+        body.invitation-open #page1 {
+            min-height: min(70vh, 680px) !important;
+            justify-content: center;
+            align-items: center;
+        }
+        body.invitation-open #page2,
+        body.invitation-open #page3,
+        body.invitation-open #page4,
+        body.invitation-open #page5 { padding-bottom: 1rem; }
+        body.invitation-open .page::-webkit-scrollbar { display: none; }
+        @media (max-width: 520px) {
+            body.invitation-open .invitation-card {
+                width: calc(100vw - 16px) !important;
+                max-width: 486px !important;
+            }
+        }
+
+        /* Large, elegant gold-framed wedding gift QR. */
+        .digital-gift-box {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            margin: 12px 0 18px;
+            padding: 25px 18px 22px;
+            text-align: center;
+            border: 1px solid rgba(244,216,120,.72);
+            border-radius: 24px;
+            background:
+                radial-gradient(ellipse at top, rgba(212,175,55,.22), transparent 60%),
+                linear-gradient(145deg, rgba(18,13,4,.98), rgba(38,29,9,.98) 54%, rgba(13,11,6,.98));
+            box-shadow: 0 15px 35px rgba(0,0,0,.42), inset 0 0 0 4px rgba(212,175,55,.07), 0 0 24px rgba(212,175,55,.12);
+        }
+        .digital-gift-box::before {
+            content: "";
+            position: absolute;
+            inset: 8px;
+            border: 1px solid rgba(244,216,120,.25);
+            border-radius: 17px;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .gift-ornament { color: #f8e7a0; letter-spacing: 8px; font-size: 15px; margin-bottom: 8px; }
+        .gift-bank-label {
+            display: inline-block;
+            padding: 5px 16px;
+            border-radius: 30px;
+            color: #201707;
+            background: linear-gradient(135deg, #fff2ad, #d4af37 52%, #f9e7a0);
+            box-shadow: 0 4px 14px rgba(212,175,55,.22);
+            font-family: Arial, sans-serif;
+            font-size: .83rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+        .gift-title {
+            margin: 13px 0 7px;
+            color: #ffe9a0;
+            font-family: 'Moul', cursive;
+            font-size: 1.12rem;
+            line-height: 1.8;
+            text-shadow: 0 2px 12px rgba(212,175,55,.24);
+        }
+        .gift-subtitle {
+            color: #f7e8bf;
+            font-size: .82rem;
+            line-height: 1.8;
+            margin: 0 auto 18px;
+            max-width: 320px;
+        }
+        .gift-qr-frame {
+            width: min(78vw, 330px);
+            aspect-ratio: 1 / 1;
+            margin: 0 auto;
+            padding: 9px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, #fff4bc 0%, #bd8c19 20%, #fff0a6 43%, #8a6508 63%, #ffeaa1 82%, #d4af37 100%);
+            box-shadow: 0 0 0 1px rgba(255,246,207,.5), 0 0 26px rgba(212,175,55,.3), 0 12px 30px rgba(0,0,0,.34);
+        }
+        .gift-qr-inner {
+            width: 100%;
+            height: 100%;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: inset 0 0 0 1px rgba(0,0,0,.08);
+        }
+        .gift-qr-inner img { width: 100%; height: 100%; object-fit: contain; display: block; }
+        .qr-missing-message {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            color: #72540a;
+            font-family: 'Kantumruy Pro', sans-serif;
+            text-align: center;
+        }
+        .qr-missing-message[hidden] { display: none !important; }
+        .qr-missing-icon { font-family: Arial, sans-serif; font-size: 4.5rem; line-height: 1; color: #9a7718; }
+        .qr-missing-message strong { font-family: Arial, sans-serif; font-size: 1rem; letter-spacing: 1px; }
+        .qr-missing-message span:not(.qr-missing-icon) { font-size: .78rem; line-height: 1.6; }
+        .qr-missing-message small { font-size: .62rem; color: #777; overflow-wrap: anywhere; }
+        .gift-thank-you { color: #f8e8b8; margin: 18px auto 8px; font-size: .78rem; line-height: 1.8; max-width: 320px; }
+        .gift-bottom-ornament { color: #d4af37; font-size: .72rem; letter-spacing: 2px; }
+        /* Location card styled to match the maroon-and-gold reference screenshot. */
+        .wedding-location-card {
+            margin: 0 0 14px;
+            padding: 14px 10px 12px;
+            border: 1px solid rgba(244,216,120,.72);
+            border-radius: 18px;
+            background: linear-gradient(145deg, rgba(74,0,19,.98), rgba(91,7,29,.98));
+            box-shadow: 0 10px 26px rgba(0,0,0,.3), inset 0 0 0 3px rgba(212,175,55,.06);
+            color: #f8e7a0;
+            text-align: center;
+        }
+        .location-heading {
+            margin-bottom: 5px;
+            color: #f8df83;
+            font-family: 'Moul', cursive;
+            font-size: .94rem;
+            line-height: 1.8;
+            text-shadow: 0 1px 8px rgba(212,175,55,.2);
+        }
+        .location-intro { margin: 0 0 11px; color: #f5dfc8; font-size: .72rem; line-height: 1.8; }
+        .location-map-frame {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            border-radius: 13px;
+            border: 1px solid rgba(255,232,160,.7);
+            background: #f4f1e9;
+            box-shadow: 0 5px 16px rgba(0,0,0,.22);
+        }
+        .location-map-frame iframe { width: 100%; height: 100%; display: block; border: 0; }
+        .location-details {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            margin: 13px 5px 12px;
+            text-align: left;
+            color: #f6df9a;
+            font-size: .76rem;
+            line-height: 1.8;
+        }
+        .location-pin { color: #e33d36; font-size: .95rem; line-height: 1.6; text-shadow: 0 0 7px rgba(227,61,54,.28); }
+        .location-details strong { display: block; color: #f8df83; font-size: .78rem; }
+        .location-details p { margin: 2px 0 0; color: #f5dfc8; font-size: .7rem; }
+        .location-map-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 42px;
+            padding: 10px 12px;
+            border-radius: 11px;
+            background: linear-gradient(135deg, #f4d8a8, #d4af62, #e1bd75);
+            color: #3d1b15 !important;
+            text-decoration: none;
+            font-size: .77rem;
+            font-weight: 800;
+            box-shadow: 0 4px 12px rgba(0,0,0,.2);
+            transition: transform .2s ease, filter .2s ease;
+        }
+        .location-map-link:hover { transform: translateY(-1px); filter: brightness(1.05); }
+        @media (max-width: 380px) { .location-map-frame { height: 160px; } .wedding-location-card { padding: 12px 8px 10px; } }
+
+        .date-main-line { color: #ffe8a0; font-family: 'Moul', cursive; font-size: .9rem; line-height: 1.8; margin: 6px 0; }
+        .date-detail-line { color: #f4d878; font-size: .8rem; line-height: 1.9; }
+        .contact-section-box { text-align: left; padding: 12px 16px; }
+        .contact-section-box p { margin: 5px 0; font-size: .78rem; line-height: 1.7; color: #f4d878; }
+        .contact-section-box .section-title { text-align: center; margin-bottom: 8px; }
+
+        /* PAGE 1: let the cover photo fill the card beautifully, edge-to-edge inside the gold frame. */
+        .invitation-scroll > #page1 {
+            box-sizing: border-box !important;
+            position: relative !important;
+            width: calc(100% + 2.4rem) !important;
+            height: auto !important;
+            min-height: calc(100% + 4rem) !important;
+            margin: -2rem -1.2rem !important;
+            padding: .9rem !important;
+            flex: 0 0 auto !important;
+            overflow: hidden !important;
+            border: 1px solid rgba(244, 216, 120, .65) !important;
+            border-radius: 18px !important;
+            background-color: #300612 !important;
+            background-image:
+                linear-gradient(180deg, rgba(38, 0, 10, .30) 0%, rgba(25, 0, 8, .38) 48%, rgba(20, 0, 7, .62) 100%),
+                url('backgrund/IMG_0987.jpg') !important;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            box-shadow: inset 0 0 0 1px rgba(255, 239, 174, .14), inset 0 0 35px rgba(35, 0, 8, .24) !important;
+        }
+        .invitation-scroll > #page1 .envelope-cover {
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 100%;
+            height: auto;
+            padding: clamp(3.2rem, 7vh, 4.3rem) .5rem 1.8rem;
+            justify-content: center;
+        }
+        .invitation-scroll > #page1 .page1-logo-frame {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: .15rem auto .8rem;
+        }
+        .invitation-scroll > #page1 .page1-logo {
+            width: min(260px, 70vw);
+            height: min(170px, 34vw);
+            min-height: 90px;
+        }
+        .invitation-scroll > #page1 .guest-name-box {
+            box-shadow: 0 0 18px rgba(212, 175, 55, .26);
+        }
+        .invitation-scroll > #page1 .wax-seal-btn {
+            flex: 0 0 auto;
+            box-shadow: 0 0 25px rgba(212, 175, 55, .42), inset 0 2px 5px rgba(255,255,255,.38);
+        }
+
+        /* Keep the cover photo full-height when the invitation has been opened and the pages scroll. */
+        body.invitation-open .invitation-scroll > #page1 {
+            width: calc(100% + 2.4rem) !important;
+            min-height: calc(100% + 4rem) !important;
+            height: auto !important;
+            margin: -2rem -1.2rem 24px !important;
+            padding: .9rem !important;
+            background-size: cover !important;
+            background-position: center center !important;
+        }
+        body.invitation-open .invitation-scroll > #page1 .envelope-cover {
+            min-height: 100%;
+            padding-top: clamp(3.2rem, 7vh, 4.3rem);
+            padding-bottom: 1.8rem;
+        }
+        @media (max-width: 520px) {
+            .invitation-scroll > #page1,
+            body.invitation-open .invitation-scroll > #page1 {
+                width: calc(100% + 2.4rem) !important;
+                margin-left: -1.2rem !important;
+                margin-right: -1.2rem !important;
+            }
+            .invitation-scroll > #page1 .page1-logo {
+                width: min(235px, 68vw);
+                height: min(150px, 31vw);
+            }
+        }
+    </style>
+
+    <!-- JavaScript code functionality -->
     <script>
-
-        // Show the guest name supplied in the invitation URL, for example ?to=លោក%20សុខា
+        // បង្ហាញឈ្មោះភ្ញៀវពី URL: ?to=លោកគ្រូ%20ខេង%20និង%20ភរិយា
+        // URLSearchParams.get() បាន decode %20 ជា space រួចហើយ ដូច្នេះមិនត្រូវ decodeURIComponent() ម្តងទៀតទេ។
         (function setGuestNameFromURL() {
             const guestParam = new URLSearchParams(window.location.search).get('to');
             const guestEl = document.getElementById('guestName');
+
             if (guestEl && guestParam && guestParam.trim()) {
                 guestEl.textContent = `ជូនចំពោះ ${guestParam.trim()}`;
             }
         })();
 
+        // Falling Petals Generator
         function createPetals() {
             const container = document.getElementById('petal-container');
-            if (!container) return;
-            for (let i = 0; i < 18; i++) {
+            const petalCount = 20;
+            for (let i = 0; i < petalCount; i++) {
                 const petal = document.createElement('div');
                 petal.classList.add('petal');
                 petal.style.left = Math.random() * 100 + 'vw';
-                petal.style.top = '-10vh';
-                const size = Math.random() * 8 + 10;
+                petal.style.top = -10 + 'vh';
+                const size = Math.random() * 10 + 10;
                 petal.style.width = size + 'px';
                 petal.style.height = size * 1.4 + 'px';
                 petal.style.animationDuration = (Math.random() * 5 + 5) + 's';
@@ -757,113 +2187,294 @@
         }
         createPetals();
 
+        // មុខងារបង្កើតមេអំបៅហើររាយប៉ាយសម្រាប់ Page 2
         function startButterflies() {
             const container = document.getElementById('butterfly-container');
+
             if (!container) return;
+
             container.innerHTML = '';
-            for (let i = 0; i < 10; i++) {
-                const butterfly = document.createElement('div');
+            container.style.display = 'block';
+
+            // 42 looks full but remains smoother and less crowded than 50.
+            const butterflyCount = 20;
+
+            for (let i = 0; i < butterflyCount; i++) {
+                const bf = document.createElement('div');
                 const inner = document.createElement('div');
-                butterfly.className = 'flying-butterfly';
+
+                bf.className = 'flying-butterfly';
                 inner.className = 'butterfly-inner';
-                const random = (min, max) => Math.random() * (max - min) + min;
-                const size = random(14, 30);
-                const duration = random(15, 25);
-                butterfly.style.setProperty('--size', size + 'px');
-                butterfly.style.setProperty('--scale', random(0.65, 1.05));
-                butterfly.style.setProperty('--opacity', random(0.55, 0.85));
-                butterfly.style.setProperty('--duration', duration + 's');
-                butterfly.style.setProperty('--delay', -(Math.random() * duration) + 's');
-                butterfly.style.setProperty('--wing-speed', '0.2s');
-                butterfly.style.setProperty('--x0', random(-5, 105) + 'vw');
-                butterfly.style.setProperty('--y0', random(-10, 105) + 'vh');
-                butterfly.style.setProperty('--x6', random(-5, 105) + 'vw');
-                butterfly.style.setProperty('--y6', random(-10, 105) + 'vh');
-                butterfly.style.setProperty('--r0', '0deg');
-                butterfly.style.setProperty('--r6', '10deg');
-                butterfly.appendChild(inner);
-                container.appendChild(butterfly);
+
+                // Different natural butterfly colors
+                const butterflyColors = [
+                    'hue-rotate(0deg) saturate(1.15)',
+                    'hue-rotate(25deg) saturate(1.2)',
+                    'hue-rotate(55deg) saturate(1.15)',
+                    'hue-rotate(95deg) saturate(1.05)',
+                    'hue-rotate(145deg) saturate(1.1)',
+                    'hue-rotate(195deg) saturate(1.1)',
+                    'hue-rotate(235deg) saturate(1.15)',
+                    'hue-rotate(285deg) saturate(1.1)',
+                    'hue-rotate(325deg) saturate(1.15)'
+                ];
+                inner.style.filter = butterflyColors[Math.floor(Math.random() * butterflyColors.length)] +
+                    ' drop-shadow(0 2px 3px rgba(0,0,0,.12))';
+
+                // Random natural variation
+                const size = Math.random() * 18 + 14;          // 14–32px: smaller, lighter butterflies
+                const scale = Math.random() * 0.40 + 0.65;    // 0.65–1.05
+                const opacity = Math.random() * 0.30 + 0.55;  // 0.55–0.85
+
+                // Slow flight = more natural / smooth
+                const duration = Math.random() * 10 + 17;     // 17–27 sec
+                const delay = -(Math.random() * duration);    // already spread across screen
+
+                // Wing and floating speeds
+                const wingSpeed = (Math.random() * 0.12 + 0.18).toFixed(2);
+                const floatSpeed = (Math.random() * 0.8 + 1.4).toFixed(2);
+
+                // Random full-screen flight path — every butterfly gets its own route
+                const startX = Math.random() * 100;
+                const rand = (min, max) => Math.random() * (max - min) + min;
+                const points = [
+                    [rand(-8, 108), rand(-12, 105)],
+                    [rand(-5, 105), rand(0, 100)],
+                    [rand(-5, 105), rand(5, 100)],
+                    [rand(-5, 105), rand(5, 100)],
+                    [rand(-5, 105), rand(5, 100)],
+                    [rand(-5, 105), rand(0, 105)],
+                    [rand(-8, 108), rand(-12, 112)]
+                ];
+
+                const [x0,y0]=points[0], [x1,y1]=points[1], [x2,y2]=points[2],
+                      [x3,y3]=points[3], [x4,y4]=points[4], [x5,y5]=points[5], [x6,y6]=points[6];
+
+                // Gentle rotation; avoid robotic spinning
+                const base = Math.random() * 12 - 6;
+                const r0 = base;
+                const r1 = base + (Math.random() * 12 - 6);
+                const r2 = base + (Math.random() * 16 - 8);
+                const r3 = base + (Math.random() * 18 - 9);
+                const r4 = base + (Math.random() * 16 - 8);
+                const r5 = base + (Math.random() * 12 - 6);
+                const r6 = base + (Math.random() * 10 - 5);
+
+                bf.style.left = '0px';
+                bf.style.top = '0px';
+
+                bf.style.setProperty('--size', size + 'px');
+                bf.style.setProperty('--scale', scale);
+                bf.style.setProperty('--opacity', opacity);
+
+                bf.style.setProperty('--duration', duration + 's');
+                bf.style.setProperty('--delay', delay + 's');
+                bf.style.setProperty('--wing-speed', wingSpeed + 's');
+                bf.style.setProperty('--float-speed', floatSpeed + 's');
+
+                bf.style.setProperty('--x0', x0.toFixed(1) + 'vw');
+                bf.style.setProperty('--y0', y0.toFixed(1) + 'vh');
+                bf.style.setProperty('--x1', x1.toFixed(1) + 'vw');
+                bf.style.setProperty('--y1', y1.toFixed(1) + 'vh');
+                bf.style.setProperty('--x2', x2.toFixed(1) + 'vw');
+                bf.style.setProperty('--y2', y2.toFixed(1) + 'vh');
+                bf.style.setProperty('--x3', x3.toFixed(1) + 'vw');
+                bf.style.setProperty('--y3', y3.toFixed(1) + 'vh');
+                bf.style.setProperty('--x4', x4.toFixed(1) + 'vw');
+                bf.style.setProperty('--y4', y4.toFixed(1) + 'vh');
+                bf.style.setProperty('--x5', x5.toFixed(1) + 'vw');
+                bf.style.setProperty('--y5', y5.toFixed(1) + 'vh');
+                bf.style.setProperty('--x6', x6.toFixed(1) + 'vw');
+                bf.style.setProperty('--y6', y6.toFixed(1) + 'vh');
+
+                bf.style.setProperty('--r0', r0 + 'deg');
+                bf.style.setProperty('--r1', r1 + 'deg');
+                bf.style.setProperty('--r2', r2 + 'deg');
+                bf.style.setProperty('--r3', r3 + 'deg');
+                bf.style.setProperty('--r4', r4 + 'deg');
+                bf.style.setProperty('--r5', r5 + 'deg');
+                bf.style.setProperty('--r6', r6 + 'deg');
+
+                bf.appendChild(inner);
+                container.appendChild(bf);
             }
         }
-        startButterflies();
 
-        // Reveal timeline events smoothly as they enter the viewport.
-        if ('IntersectionObserver' in window) {
-            const timelineObserver = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) entry.target.classList.add('visible');
-                });
-            }, { threshold: 0.12 });
-            document.querySelectorAll('.timeline-item').forEach((item) => timelineObserver.observe(item));
-        } else {
-            document.querySelectorAll('.timeline-item').forEach((item) => item.classList.add('visible'));
+        function stopButterflies() {
+            const container = document.getElementById('butterfly-container');
+            if (container) {
+                container.style.display = 'none';
+                container.innerHTML = '';
+            }
         }
 
-        // Background wedding music: try autoplay on page load. If the browser blocks
-        // audible autoplay, start on the first guest interaction with the page.
+        // Navigation Management: show all sections and scroll vertically inside the card.
+        function goToPage(pageNumber) {
+            const card = document.querySelector('.invitation-scroll');
+            const targetPage = document.getElementById('page' + pageNumber);
+            if (!card || !targetPage) return;
+
+            // Once the envelope is opened, every section becomes part of one long page.
+            document.body.classList.add('invitation-open');
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.toggle('active', page === targetPage);
+            });
+
+            requestAnimationFrame(() => {
+                card.scrollTo({ top: Math.max(0, targetPage.offsetTop), behavior: 'smooth' });
+            });
+
+            if (pageNumber === 2) {
+                setTimeout(handleScrollAnimation, 150);
+                startButterflies();
+            } else {
+                stopButterflies();
+            }
+        }
+
+        function openInvitation() {
+            playMusic();
+            goToPage(2);
+        }
+
+        // Music controls: one persistent button for all invitation pages.
         const music = document.getElementById('bgMusic');
         const musicToggle = document.getElementById('musicToggle');
         let isPlaying = false;
-        let firstGestureHandled = false;
-        let userPausedMusic = false;
 
-        function updateMusicButton(playing) {
+        function updateMusicToggle(playing) {
             isPlaying = playing;
             if (!musicToggle) return;
             musicToggle.classList.toggle('playing', playing);
             musicToggle.textContent = playing ? '🔊' : '🎵';
-            musicToggle.setAttribute('aria-pressed', String(playing));
+            musicToggle.setAttribute('aria-pressed', playing ? 'true' : 'false');
+            musicToggle.setAttribute('aria-label', playing ? 'បិទចម្រៀង' : 'បើកចម្រៀង');
+            musicToggle.title = playing ? 'ចុចដើម្បីបិទចម្រៀង' : 'ចុចដើម្បីបើកចម្រៀង';
         }
 
-        async function playMusic() {
-            if (!music) return false;
-            try {
-                music.muted = false;
-                music.volume = 0.7;
-                await music.play();
-                updateMusicButton(true);
-                return true;
-            } catch (error) {
-                // Chrome/Safari may block sound until the visitor interacts with the page.
-                updateMusicButton(false);
-                return false;
-            }
-        }
-
-        function pauseMusic() {
-            if (music) music.pause();
-            userPausedMusic = true;
-            updateMusicButton(false);
-        }
-
-        function toggleMusic(event) {
-            if (event) event.stopPropagation();
+        function toggleMusic() {
             if (!music) return;
-            if (!music.paused) {
-                pauseMusic();
-            } else {
-                userPausedMusic = false;
-                playMusic();
+            if (isPlaying && !music.paused) {
+                music.pause();
+                updateMusicToggle(false);
+                return;
+            }
+            music.play().then(() => {
+                updateMusicToggle(true);
+            }).catch(error => {
+                updateMusicToggle(false);
+                console.log('Audio playback was blocked:', error);
+            });
+        }
+
+        function playMusic() {
+            if (!music || isPlaying) return;
+            music.play().then(() => {
+                updateMusicToggle(true);
+            }).catch(error => {
+                updateMusicToggle(false);
+                console.log('Audio autoplay was prevented:', error);
+            });
+        }
+
+        // Timeline Scroll Reveal Animation
+        function handleScrollAnimation() {
+            const items = document.querySelectorAll('#page2 .timeline-item');
+            const card = document.querySelector('.invitation-card');
+            if (!card) return;
+            const cardRect = card.getBoundingClientRect();
+            items.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                // Reveal each timeline item when it enters the visible card area.
+                if (rect.top < cardRect.bottom - 24 && rect.bottom > cardRect.top + 24) {
+                    item.classList.add('visible');
+                }
+            });
+        }
+        const invitationCardForScroll = document.querySelector('.invitation-scroll');
+        if (invitationCardForScroll) {
+            invitationCardForScroll.addEventListener('scroll', handleScrollAnimation, { passive: true });
+        }
+
+        // Gallery Slider Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        const dotsContainer = document.getElementById('sliderDots');
+        if (dotsContainer) {
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.style.width = '8px';
+                dot.style.height = '8px';
+                dot.style.borderRadius = '50%';
+                dot.style.background = i === 0 ? 'var(--primary-gold)' : 'rgba(255,255,255,0.4)';
+                dot.style.cursor = 'pointer';
+                dot.onclick = () => goToSlide(i);
+                dotsContainer.appendChild(dot);
             }
         }
 
-        // Best-effort autoplay immediately when the invitation opens.
-        if (music) {
-            music.loop = true;
-            music.preload = 'auto';
-            playMusic();
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            updateSlider();
         }
 
-        function startMusicOnFirstGesture(event) {
-            if (firstGestureHandled) return;
-            firstGestureHandled = true;
-            // A tap on the music button is already handled by toggleMusic().
-            if (event.target && event.target.closest && event.target.closest('#musicToggle')) return;
-            if (music && music.paused && !userPausedMusic) playMusic();
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
         }
 
-        document.addEventListener('pointerdown', startMusicOnFirstGesture, { passive: true });
-        document.addEventListener('keydown', startMusicOnFirstGesture);
+        function updateSlider() {
+            const slider = document.getElementById('slider');
+            if (slider) {
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+                const dots = dotsContainer.children;
+                for (let i = 0; i < dots.length; i++) {
+                    dots[i].style.background = i === currentSlide ? '#fff' : 'rgba(255,255,255,0.38)';
+                    dots[i].style.transform = i === currentSlide ? 'scale(1.25)' : 'scale(1)';
+                }
+
+                const counter = document.getElementById('galleryCounter');
+                if (counter) counter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+
+                document.querySelectorAll('.memory-thumb').forEach((thumb, i) => {
+                    thumb.classList.toggle('active', i === currentSlide);
+                });
+            }
+        }
+
+        // Swipe / drag support for mobile gallery
+        const galleryHero = document.querySelector('.memory-hero');
+        if (galleryHero) {
+            let touchStartX = 0;
+            galleryHero.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, {passive:true});
+            galleryHero.addEventListener('touchend', e => {
+                const touchEndX = e.changedTouches[0].screenX;
+                const diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > 45) moveSlide(diff > 0 ? 1 : -1);
+            }, {passive:true});
+        }
+
+        // Vertical memory reveal animation
+        const memorySlides = document.querySelectorAll('#page4 .memory-hero .slide');
+        if ('IntersectionObserver' in window && memorySlides.length) {
+            const memoryObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('show-memory');
+                });
+            }, { root: document.getElementById('page4'), threshold: 0.12 });
+            memorySlides.forEach(slide => memoryObserver.observe(slide));
+        } else {
+            memorySlides.forEach(slide => slide.classList.add('show-memory'));
+        }
+
+        
+
+        
     </script>
+    
 </body>
 </html>
