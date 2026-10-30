@@ -21,21 +21,21 @@
 <meta name="twitter:image" content="https://cheaananandsiengsaychinh.pages.dev/cheaanonandsiengjing.jpg">
 
     <!-- កូដ JavaScript សម្រាប់ទាញយកឈ្មោះភ្ញៀវមកដូរ Meta ស្វ័យប្រវត្តិ -->
-    <script>
+     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const guestName = urlParams.get('to');
 
         if (guestName) {
-            document.title = `អាពាហ៍ពិពាហ៍ ជា អានន្ទ & សៀង សាយជីញ 💍 - ${guestName}`;
+            document.title = `អាពាហ៍ពិពាហ៍ 💍 - ${guestName}`;
             
             let ogTitle = document.querySelector('meta[property="og:title"]');
-            if (ogTitle) ogTitle.setAttribute('content', `អាពាហ៍ពិពាហ៍ ជា អានន្ទ & សៀង សាយជីញ 💍 - សូមគោរពអញ្ជើញ ${guestName}`);
+            if (ogTitle) ogTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestName}`);
 
             let ogDesc = document.querySelector('meta[property="og:description"]');
             if (ogDesc) ogDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
 
             let twTitle = document.querySelector('meta[name="twitter:title"]');
-            if (twTitle) twTitle.setAttribute('content', `អាពាហ៍ពិពាហ៍ ជា អានន្ទ & សៀង សាយជីញ 💍 - សូមគោរពអញ្ជើញ ${guestName}`);
+            if (twTitle) twTitle.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestName}`);
 
             let twDesc = document.querySelector('meta[name="twitter:description"]');
             if (twDesc) twDesc.setAttribute('content', `សូមគោរពអញ្ជើញ ${guestName} ចូលរួមក្នុងពិធីមង្គលការយើងខ្ញុំ ❤️`);
